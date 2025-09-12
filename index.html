@@ -1,89 +1,578 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>OBP | Cloud Engineer</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f9;
-      color: #333;
-    }
-    header {
-      background: #1f2937;
-      color: #fff;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 1rem;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      margin-top: 0;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #1f2937;
-      color: #fff;
-      margin-top: 2rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozan Berk Polat | Cloud Engineer</title>
+    <style>
+        /* Inter Font from Goole Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        /* VARIABLES */
+        :root {
+            --accent-color: #47ebeb;
+            --background-color: #2a2a31;
+            --text-color: #fff;
+            --text-color-muted: #b9b9b9;
+
+            /* spacing */
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 32px;
+            --space-xl: 64px;
+            --space-xxl: 128px;
+
+            /* typography */
+            --font-size-xs: 14px;
+            --font-size-sm: 16px;
+            --font-size-md: 18px;
+            --font-size-lg: 24px;
+            --font-size-xl: 28px;
+            --font-size-xxl: 88px;
+        }
+
+        body {
+            background-color: var(--background-color);
+            font-family: Inter, Arial, sans-serif;
+            margin: 0;
+            padding: 0 20px;
+            color: var(--text-color);
+        }
+
+        #page {
+            display: flex;
+            flex-direction: column;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding-top: var(--space-md);
+        }
+
+        /* LOGO AND NAVIGATION */
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        nav {
+
+            margin-left: auto;
+        }
+
+        .logo {
+            font-size: var(--font-size-lg);
+            font-weight: 700;
+
+        }
+
+        nav ul {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            margin: 0;
+        }
+
+        nav ul li a:link,
+        nav ul li a:visited {
+            color: var(--text-color);
+            opacity: 0.7;
+        }
+
+        /* TYPOGRAPHY */
+
+        a:link,
+        a:visited {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: var(--font-size-xxl);
+            margin-bottom: var(--space-sm);
+        }
+
+        h2 {
+            font-size: var(--font-size-xl);
+            color: var(--accent-color);
+            margin-bottom: var(--space-lg);
+            font-weight: 200;
+            margin-top: var(--space-xl);
+        }
+
+        h3 {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--space-sm);
+            font-weight: 400;
+        }
+
+        p {
+            font-size: var(--font-size-sm);
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--text-color-muted);
+            margin-bottom: var(--space-md);
+
+        }
+
+        /* SECTIONS  */
+
+        #about {
+            margin-top: var(--space-xxl);
+        }
+
+        #about h1 {
+            font-size: var(--font-size-xxl);
+            margin-bottom: var(--space-sm);
+        }
+
+        #about p {
+            font-size: var(--font-size-xl);
+            font-weight: 200;
+            line-height: 1.4;
+            color: var(--text-color);
+        }
+
+        section {
+            margin-top: var(--space-xxl);
+            margin-bottom: var(--space-xxl);
+        }
+
+        .card {
+            background: linear-gradient(90deg, #35353f 0%, #3d3b3e 50%, #3d3b3e 50%);
+            border-radius: 20px;
+            padding: var(--space-xs) var(--space-lg) var(--space-lg);
+            border: 0.5px solid #484851;
+            margin-bottom: var(--space-lg);
+        }
+
+        .card p {
+            margin: var(--space-xs) 0;
+            font-size: var(--font-size-xs);
+        }
+
+        /* SKILLS */
+
+        #skills p {
+            line-height: 1.8;
+        }
+
+        /* EXPERIENCE */
+
+        #experience .job p.role {
+            font-size: var(--font-size-md);
+        }
+
+        /* RECENT WORK */
+
+        .project {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            grid-template-rows: 1fr 3fr;
+            column-gap: var(--space-lg);
+            padding: var(--space-md) var(--space-lg);
+        }
+
+        .project .thumbnail {
+            grid-row: span 2;
+        }
+
+        .project img {
+            width: 100%;
+            margin-top: var(--space-md);
+            border-radius: 14px;
+        }
+
+        .project p a {
+            display: block;
+            margin-top: var(--space-md);
+        }
+
+        /* CONTACT  */
+
+        #contact {
+            text-align: center;
+        }
+
+        #contact p {
+            font-size: var(--font-size-lg);
+            font-weight: 200;
+            line-height: 1.4;
+            color: var(--text-color);
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            margin-top: var(--space-xl);
+            padding: 0 0 var(--space-lg);
+            color: var(--text-color-muted);
+            text-align: center;
+        }
+
+        footer .social {
+            display: flex;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-lg);
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer .social a:hover svg {
+            fill: var(--accent-color);
+        }
+
+
+        /* MEDIA QUERIES */
+
+        @media screen and (max-width: 600px) {
+            :root {
+                --primary-color: #f9a826;
+                --secondary-color: #f9a826;
+                --accent-color: #47ebeb;
+                --background-color: #2a2a31;
+                --text-color: #fff;
+                --text-color-muted: #b9b9b9;
+
+                /* spacing */
+                --space-xs: 4px;
+                --space-sm: 8px;
+                --space-md: 16px;
+                --space-lg: 32px;
+                --space-xl: 64px;
+                --space-xxl: 128px;
+
+                /* typography */
+                --font-size-xs: 14px;
+                --font-size-sm: 16px;
+                --font-size-md: 18px;
+                --font-size-lg: 20px;
+                --font-size-xl: 24px;
+                --font-size-xxl: 48px;
+            }
+
+            header {
+                align-items: flex-start;
+            }
+
+            .logo {
+                font-size: var(--font-size-xl);
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 14px;
+                list-style: none;
+                align-items: flex-end;
+            }
+
+            section {
+                margin-top: var(--space-xl);
+                margin-bottom: var(--space-lg);
+            }
+
+            h2 {
+                margin-top: var(--space-lg);
+            }
+
+            .project {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <h1>OBP</h1>
-    <p>Cloud Engineer | DevOps Enthusiast</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <div id="page">
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I’m a Cloud Engineer with experience in Azure, Kubernetes, Docker, and infrastructure as code.  
-      This site showcases some of my projects, experiments, and notes.
-    </p>
-  </section>
+        <header>
+            <div class="logo">
+                <a href="/">JM.</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#portfolio">Recent Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Monitoring Stack:</strong> Prometheus + Grafana on Kubernetes</li>
-      <li><strong>IaC Modules:</strong> Bicep templates for reusable deployments</li>
-      <li><strong>Container Demos:</strong> Dockerized Nginx and MongoDB labs</li>
-    </ul>
-  </section>
+        <main>
+            <div id="about">
+                <h1>
+                    Hi, I'm Josh.
+                </h1>
+                <p>
+                    UI/UX Designer and Front-End Engineer. Currently, I'm based in the Greater Boston Area, designing
+                    responsive websites and leading the creative process at <a href="#job" target="_blank">WiredFlow</a>
+                    Agency.
+                </p>
+            </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>
-      Find me on <a href="https://github.com/YOUR_USERNAME" target="_blank">GitHub</a>  
-      or connect on <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>.
-    </p>
-  </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <div class="skill card">
+                    <h3>
+                        Graphic Design &amp; Creative Direction
+                    </h3>
+                    <p>
+                        &bull; Building Responsive UI/UX Design for Web and Mobile. Creating Brand Strategy and Design
+                        Systems
+                        <br>
+                        &bull; Wireframing User Flows and delivering High-fidelity Prototypes for Developer Hand-off
+                    </p>
+                </div>
 
-  <footer>
-    <p>© 2025 OBP | Built with GitHub Pages</p>
-  </footer>
+                <div class="skill card">
+                    <h3>
+                        Front-End Development
+                    </h3>
+                    <p>
+                        &bull; Proficient in HTML, CSS &amp; JavaScript with
+                        3yrs experience in React, Node.js & Express.
+                        <br>
+                        &bull; Familiar with User Testing &amp; Conversion Optimization Tools like Optimizely &amp; VWO.
+                    </p>
+                </div>
+
+                <div class="skill card">
+                    <h3>
+                        Back-End Development
+                    </h3>
+                    <p>
+                        &bull; Familiar with Git Workflow, Docker and CI/CD
+                        <br>
+                        &bull; Experience with MongoDB, MySQL, PostgreSQL databse setup and management
+                        <br>
+                        &bull; Building RESTful APIs and GraphQL based query systems
+                    </p>
+                </div>
+
+                <div class="skill card">
+                    <h3>
+                        Tools
+                    </h3>
+                    <p>
+                        &bull; Familiar with Figma &amp; the Adobe Creative Suite
+                        <br>
+                        &bull; Integration of CRM &amp; Analytics Plarforms like HubSpot, Klaviyo , Mailchimp , Google
+                        Analytics &amp; Hotjar.
+                        <br>
+                        &bull; Project Management through Trello , Asana , Slack ,
+                        Jira &amp; Confluence.
+                    </p>
+                </div>
+            </section>
+
+            <section id="experience">
+                <h2>Experience</h2>
+                <div class="job card">
+                    <h3 id="job">WiredFlow Agency</h3>
+                    <p class="role">Lead UI/UX Designer</p>
+                    <p class="timeline">2019 - Present</p>
+                    <p class="responsibilities">
+                        At WiredFlow, I lead the design process for all projects. I work closely with the development
+                        team
+                        to
+                        ensure that the vision is carried through to the final product. I also work with clients to
+                        ensure
+                        that their needs are met and that they are happy with the final product.
+                    </p>
+                </div>
+                <div class="job card">
+                    <h3>Design Co.</h3>
+                    <p class="role">UI/UX Designer</p>
+                    <p class="timeline">
+                        2017 - 2019
+                    </p>
+                    <p class="responsibilities">
+                        At Design Co., I worked on a variety of projects, from small websites to large web applications.
+                        I
+                        was
+                        responsible for the design of the user interface and user experience, as well as working with
+                        the
+                        development team to ensure that the design was implemented correctly.
+                    </p>
+                </div>
+                <div class="education">
+                    <h2>Education</h2>
+
+                    <div class="school card">
+                        <h3>University of Boston</h3>
+                        <p class="degree">Bachelor of Science in Computer Science</p>
+                        <p class="timeline">2013 - 2017</p>
+                    </div>
+
+
+                </div>
+            </section>
+            <section id="portfolio">
+                <h2>Recent Work</h2>
+                <div class="project card">
+                    <div class="thumbnail"><a href="/link-to-project" target="_blank"><img
+                                src="https://plus.unsplash.com/premium_photo-1685086785054-d047cdc0e525?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Project 1"></a></div>
+                    <h3>Project 1</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nunc sit amet libero scelerisque
+                        aliquet. Nullam nec nisl ac nisi ultricies posuere.<br>
+                        <a href="/link-to-project" target="_blank">Link to Project</a>
+                    </p>
+                </div>
+                <div class="project card">
+                    <div class="thumbnail"><a href="/link-to-project" target="_blank"><img
+                                src="https://plus.unsplash.com/premium_photo-1685086785077-ff65bf749544?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Project 2"></a></div>
+                    <h3>Project 2</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nunc sit amet libero scelerisque
+                        aliquet. Nullam nec nisl ac nisi ultricies posuere.
+                        <br>
+                        <a href="/link-to-project" target="_blank">Link to Project</a>
+                    </p>
+                </div>
+                <div class="project card">
+                    <div class="thumbnail">
+                        <a href="/link-to-project" target="_blank"><img
+                                src="https://plus.unsplash.com/premium_photo-1685086785333-976367da9210?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Project 3"></a>
+                    </div>
+                    <h3>Project 3</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nunc sit amet libero scelerisque
+                        aliquet. Nullam nec nisl ac nisi ultricies posuere.<br>
+                        <a href="/link-to-project" target="_blank">Link to Project</a>
+                    </p>
+                </div>
+            </section>
+            <section id="contact">
+                <h2>Get in Touch</h2>
+                <p>
+                    If you have a project that you'd like to discuss, please get in touch with me at <a
+                        href="mailto:josh.m@emailme.org">josh.m@emailme.org</a>.
+                </p>
+            </section>
+
+
+        </main>
+
+        <footer>
+            <div class="social">
+                <!-- TWITTER -->
+                <a href="https://twitter.com/username" target="_blank">
+                    <svg fill="#FFFFFF" height="40px" width="40px" version="1.1" id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 310 310" xml:space="preserve">
+                        <g id="XMLID_826_">
+                            <path id="XMLID_827_" d="M302.973,57.388c-4.87,2.16-9.877,3.983-14.993,5.463c6.057-6.85,10.675-14.91,13.494-23.73
+    c0.632-1.977-0.023-4.141-1.648-5.434c-1.623-1.294-3.878-1.449-5.665-0.39c-10.865,6.444-22.587,11.075-34.878,13.783
+    c-12.381-12.098-29.197-18.983-46.581-18.983c-36.695,0-66.549,29.853-66.549,66.547c0,2.89,0.183,5.764,0.545,8.598
+    C101.163,99.244,58.83,76.863,29.76,41.204c-1.036-1.271-2.632-1.956-4.266-1.825c-1.635,0.128-3.104,1.05-3.93,2.467
+    c-5.896,10.117-9.013,21.688-9.013,33.461c0,16.035,5.725,31.249,15.838,43.137c-3.075-1.065-6.059-2.396-8.907-3.977
+    c-1.529-0.851-3.395-0.838-4.914,0.033c-1.52,0.871-2.473,2.473-2.513,4.224c-0.007,0.295-0.007,0.59-0.007,0.889
+    c0,23.935,12.882,45.484,32.577,57.229c-1.692-0.169-3.383-0.414-5.063-0.735c-1.732-0.331-3.513,0.276-4.681,1.597
+    c-1.17,1.32-1.557,3.16-1.018,4.84c7.29,22.76,26.059,39.501,48.749,44.605c-18.819,11.787-40.34,17.961-62.932,17.961
+    c-4.714,0-9.455-0.277-14.095-0.826c-2.305-0.274-4.509,1.087-5.294,3.279c-0.785,2.193,0.047,4.638,2.008,5.895
+    c29.023,18.609,62.582,28.445,97.047,28.445c67.754,0,110.139-31.95,133.764-58.753c29.46-33.421,46.356-77.658,46.356-121.367
+    c0-1.826-0.028-3.67-0.084-5.508c11.623-8.757,21.63-19.355,29.773-31.536c1.237-1.85,1.103-4.295-0.33-5.998
+    C307.394,57.037,305.009,56.486,302.973,57.388z" />
+                        </g>
+                    </svg>
+                </a>
+                <!-- LINKEDIN -->
+                <a href="https://linkedin.com/in/username" target="_blank">
+                    <svg fill="#FFFFFF" height="40px" width="40px" version="1.1" id="Icons"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 32 32" xml:space="preserve">
+                        <path d="M23,0H9C4,0,0,4,0,9v14c0,5,4,9,9,9h14c5,0,9-4,9-9V9C32,4,28,0,23,0z M12,25c0,0.6-0.4,1-1,1H7c-0.6,0-1-0.4-1-1V13
+                   c0-0.6,0.4-1,1-1h4c0.6,0,1,0.4,1,1V25z M9,11c-1.7,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S10.7,11,9,11z M26,25c0,0.6-0.4,1-1,1h-3
+                   c-0.6,0-1-0.4-1-1v-3.5v-1v-2c0-0.8-0.7-1.5-1.5-1.5S18,17.7,18,18.5v2v1V25c0,0.6-0.4,1-1,1h-3c-0.6,0-1-0.4-1-1V13
+                   c0-0.6,0.4-1,1-1h4c0.3,0,0.5,0.1,0.7,0.3c0.6-0.2,1.2-0.3,1.8-0.3c3,0,5.5,2.5,5.5,5.5V25z" />
+                    </svg></a>
+                <!-- DRIBBBLE -->
+                <a href="https://dribbble.com/username" target="_blank">
+                    <svg fill="#FFFFFF" width="40px" height="40px" viewBox="0 0 32 32"
+                        xmlns="http://www.w3.org/2000/svg">
+
+                        <title />
+
+                        <g id="Dribble">
+
+                            <path
+                                d="M26.39,30H5.6a3.32,3.32,0,0,1-2.45-1,3.38,3.38,0,0,1-1-2.48V5.5A3.37,3.37,0,0,1,3.15,3,3.32,3.32,0,0,1,5.6,2H26.39a3.32,3.32,0,0,1,2.46,1,3.37,3.37,0,0,1,1,2.47v21a3.38,3.38,0,0,1-1,2.48A3.32,3.32,0,0,1,26.39,30ZM25,15.37a9.15,9.15,0,0,0-8.57-8.66H15.36a9.16,9.16,0,0,0-8.53,8.62v1.11q1,7.65,8.53,8.6h1.09A9.14,9.14,0,0,0,25,16.44ZM10.15,21.1a7.49,7.49,0,0,1-2-5.3v-.14a26.77,26.77,0,0,0,7.77-1.1H16a5.59,5.59,0,0,0,.75,1.3A12,12,0,0,0,10.15,21.1Zm5.31-7.83a25.58,25.58,0,0,1-7.12,1,7.67,7.67,0,0,1,4.22-5.44A46.7,46.7,0,0,1,15.46,13.27Zm3.47,9.79a7.39,7.39,0,0,1-3.47,1,5.91,5.91,0,0,1-4.3-2,10.84,10.84,0,0,1,6.07-4.84A28.62,28.62,0,0,1,18.93,23.06ZM17,12.84q-.93-1.69-2.87-4.58A8,8,0,0,1,16.18,8,6.77,6.77,0,0,1,21,10,8.85,8.85,0,0,1,17,12.84Zm6.67,3a18.35,18.35,0,0,0-3.57-.37,11.68,11.68,0,0,0-1.81.13c-.06-.17-.18-.44-.35-.79a5.75,5.75,0,0,1-.34-.77,10.24,10.24,0,0,0,4.3-3.06A7.64,7.64,0,0,1,23.66,15.8Zm-3.41,6.57a44.64,44.64,0,0,0-1.49-5.57,12.69,12.69,0,0,1,1.81-.14,9.42,9.42,0,0,1,3,.48A7.65,7.65,0,0,1,20.25,22.37Z" />
+
+                        </g>
+
+                    </svg>
+                </a>
+                <!-- GITHUB -->
+                <a href="https://github.com/username" target="_blank">
+                    <svg width="40px" height="40px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" fill="#FFFFFF">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                            <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)">
+                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                    <path
+                                        d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"
+                                        id="github-[#142]">
+
+                                    </path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg></a>
+                <!-- BEHANCE -->
+                <a href="behance" target="_blank">
+                    <svg fill="#FFFFFF" height="40px" width="40px" version="1.1" id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 512 512" xml:space="preserve">
+                        <g>
+                            <path d="M344.1,244.5c-4.9-4.2-11-6.3-18.2-6.3c-7.8,0-13.9,2.2-18.3,6.7c-4.3,4.5-7,10.5-8.2,18.1h52.7
+    C351.7,254.9,348.9,248.8,344.1,244.5z" />
+                            <path d="M214.3,266.1c-3.8-1.7-9-2.6-15.8-2.7h-39v42.2H198c6.9,0,12.2-0.9,16-2.8c7-3.5,10.4-10,10.4-19.7
+    C224.4,274.9,221,269.2,214.3,266.1z" />
+                            <path d="M256,0C114.6,0,0,114.6,0,256s114.6,256,256,256s256-114.6,256-256S397.4,0,256,0z M291.6,182.3h67.8V202h-67.8
+    L291.6,182.3L291.6,182.3z M250.7,310.6c-3,4.9-6.7,9.1-11.2,12.4c-5,3.9-11,6.5-17.9,8c-6.9,1.4-14.3,2.1-22.4,2.1H128V174.9h76.5
+    c19.3,0.3,33,5.9,41,16.9c4.8,6.7,7.2,14.8,7.2,24.2c0,9.6-2.4,17.4-7.3,23.3c-2.7,3.3-6.8,6.3-12.1,9c8.1,3,14.2,7.6,18.3,14
+    s6.2,14.1,6.2,23.2C257.8,294.7,255.4,303.1,250.7,310.6z M384,283.2h-85.2c0.5,11.7,4.5,20,12.2,24.7c4.7,2.9,10.3,4.4,16.9,4.4
+    c6.9,0,12.6-1.8,17-5.4c2.4-1.9,4.5-4.6,6.3-8.1h31.2c-0.8,6.9-4.6,14-11.3,21.2c-10.5,11.4-25.1,17.1-44,17.1
+    c-15.6,0-29.3-4.8-41.2-14.4c-11.9-9.6-17.9-25.2-17.9-46.8c0-20.3,5.4-35.8,16.1-46.6c10.8-10.8,24.7-16.2,41.8-16.2
+    c10.2,0,19.4,1.8,27.5,5.5c8.2,3.6,14.9,9.4,20.2,17.3c4.8,6.9,7.9,15,9.3,24.2C383.8,265.4,384.1,273.1,384,283.2z" />
+                            <path d="M214.8,233.3c4.3-2.6,6.4-7.3,6.4-13.9c0-7.4-2.8-12.2-8.5-14.6c-4.9-1.6-11.1-2.5-18.7-2.5h-34.4v34.9H198
+    C204.9,237.3,210.4,236,214.8,233.3z" />
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <p>
+                &copy; 2024 Josh Miles. All rights reserved.
+            </p>
+            <p>
+                <a href="https://github.com/ayushsaranGithuB/one-page-portfolios/tree/main">Get this Free! One-Page
+                    Portfolio Template</a>
+            </p>
+        </footer>
+    </div>
+    <script>
+        // Catch all the # links from the nav and make them scroll smoothly to their destinations
+        const navLinks = document.querySelectorAll("nav ul li a");
+
+        // loop through the links and set an onclick event to send the user to the correct section in a smooth scroll
+        navLinks.forEach((link) => {
+            link.onclick = (e) => {
+                e.preventDefault();
+                const target = document.querySelector(e.target.getAttribute("href"));
+                target.scrollIntoView({
+                    behavior: "smooth",
+                });
+                return false;
+            };
+        });
+    </script>
 </body>
+
 </html>
