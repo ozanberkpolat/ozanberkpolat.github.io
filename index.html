@@ -165,6 +165,36 @@
             font-size: var(--font-size-md);
         }
 
+        /* About section layout */
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: var(--space-lg); /* space between image and text */
+        }
+
+        /* Round image */
+        .about-image img {
+            width: 150px; /* adjust as needed */
+            height: 150px; /* keep square for perfect circle */
+            border-radius: 50%; /* makes it round */
+            object-fit: cover; /* ensures image fills the circle nicely */
+            border: 3px solid var(--accent-color); /* optional accent border */
+        }
+
+        /* For mobile responsiveness */
+        @media screen and (max-width: 600px) {
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        
+            .about-image img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+
         /* RECENT WORK */
 
         .project {
@@ -302,10 +332,13 @@
         </header>
 
         <main>
-            <div id="about">
-                <h1>
-                    Hi, I'm Ozan 👋
-                </h1>
+    <div id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="images/ozan.jpeg" alt="Ozan Berk Polat">
+            </div>
+            <div class="about-text">
+                <h1>Hi, I'm Ozan 👋</h1>
                 <p>
                     ☁️ Cloud Engineer with expertise in Microsoft technologies, with a strong foundation in system engineering, dedicated to providing secure, scalable solutions that drive customer satisfaction and operational excellence.
                 </p>
@@ -313,7 +346,8 @@
                     Currently diving deep into IaC and DevOps to expand my knowledge on my journey to become a Cloud Architect.
                 </p>
             </div>
-
+        </div>
+    </div>
             <section id="skills">
   <h2>Skills</h2>
 
