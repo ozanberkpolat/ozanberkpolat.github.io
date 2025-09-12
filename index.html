@@ -171,17 +171,29 @@
             align-items: center;
             gap: var(--space-lg); /* space between image and text */
         }
-
+        
         /* Round image */
         .about-image img {
-            width: 150px; /* adjust as needed */
-            height: 150px; /* keep square for perfect circle */
-            border-radius: 50%; /* makes it round */
-            object-fit: cover; /* ensures image fills the circle nicely */
+            width: 180px;       /* bigger image */
+            height: 180px;
+            border-radius: 50%; /* keeps it circular */
+            object-fit: cover;
             border: 3px solid var(--accent-color); /* optional accent border */
         }
 
-        /* For mobile responsiveness */
+        /* About text adjustments */
+        .about-text h1 {
+            font-size: 72px; /* smaller heading to fit with bigger image */
+            margin-bottom: var(--space-sm);
+        }
+
+        .about-text p {
+            font-size: 16px; /* slightly smaller paragraphs */
+            line-height: 1.4;
+            color: var(--text-color);
+        }
+
+        /* Mobile responsiveness */
         @media screen and (max-width: 600px) {
             .about-container {
                 flex-direction: column;
@@ -189,10 +201,19 @@
             }
         
             .about-image img {
-                width: 120px;
-                height: 120px;
+                width: 150px;
+                height: 150px;
+            }
+        
+            .about-text h1 {
+                font-size: 48px;
+            }
+        
+            .about-text p {
+                font-size: 14px;
             }
         }
+
 
 
         /* RECENT WORK */
