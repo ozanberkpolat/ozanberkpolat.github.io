@@ -2,7 +2,7 @@
 title: How to Upgrade Microsoft Entra Connect via Staging Mode
 date: 2025-10-15 09:00:00 +0300
 categories: [How To]
-tags: [Azure, Entra, azure ad connect, upgrade]
+tags: [azure, entra, azure ad connect, upgrade]
 description: A step-by-step guide to upgrading Microsoft Entra Connect with zero downtime using the staging mode strategy.
 ---
 
