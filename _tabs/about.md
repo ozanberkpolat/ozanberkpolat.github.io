@@ -77,7 +77,7 @@ While I have a deep background in infrastructure, my current professional focus 
 ### **Information Technology Specialist**
 * **Eczacıbaşı Topluluğu** (Jul 2020 – Sep 2021)
 * **Çelebi Aviation Holding** (Feb 2019 – Jul 2020)
-* **IT Specialist | SkyTouch Consultancy / SuperTAXI** (Oct 2017 – Feb 2019)
+* **SkyTouch Consultancy / SuperTAXI** (Oct 2017 – Feb 2019)
 
 ---
 
