@@ -9,8 +9,8 @@ description: Automate monitoring of expiring Azure Entra ID
   PowerShell, Microsoft Graph, and Azure Functions.
 categories: [Azure, Entra]
 tags:
-- azure
-- entra
+- Azure
+- Entra
 - powershell
 - automation
 - certificates

@@ -1,8 +1,8 @@
 ---
 title: How to Synchronize a Specific Computer Object to Entra ID
 date: 2025-06-11 13:39:00 +0300
-categories: [how to, Azure]
-tags: [azure, entra, aadc]
+categories: [How To, Azure]
+tags: [Azure, Entra, Aadc]
 ---
 
 In many hybrid environments, synchronizing every local computer object to the cloud isn't always the best approach. There are several scenarios where selective synchronization is preferred: to maintain a clean Entra ID directory, to manage licenses more effectively, or to ensure that only authorized and active devices are visible in the cloud environment. By filtering which objects are synchronized, administrators can reduce security risks and avoid cluttering the tenant with decommissioned or irrelevant machines. This guide walks you through the steps to synchronize a specific computer object to **Entra ID** using **Azure AD Connect (AADC)**.
