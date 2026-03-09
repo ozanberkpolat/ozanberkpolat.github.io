@@ -1,8 +1,8 @@
 ---
 title: How to Fix DeletingLicensedGroupNotAllowed Errors in Entra Sync
 date: 2025-10-31 12:00:00 +0300
-categories: [how to, azure]
-tags: [azure, azure ad connect, troubleshooting, powershell, microsoft graph]
+categories: [How To, Azure]
+tags: [Azure, azure ad connect, troubleshooting, powershell, microsoft graph]
 ---
 
 If you manage a hybrid Microsoft Entra ID (formerly Azure AD) environment, you know that Azure AD Connect is usually a "set it and forget it" tool. But occasionally, you might check your sync logs and find a stubborn export error: `DeletingLicensedGroupNotAllowed`. 
