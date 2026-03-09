@@ -1,6 +1,6 @@
 ---
 title: "Azure Essentials: A Professional Guide from My Early Career"
-date: 2021-12-25 10:00:00 +0300
+date: 2023-12-25 10:00:00 +0300
 categories: [Know-How]
 tags: [azure, entra-id, networking, virtual-machines, infrastructure]
 description: A comprehensive collection of foundational Azure concepts and operational insights gathered during my first steps into the tech industry.
