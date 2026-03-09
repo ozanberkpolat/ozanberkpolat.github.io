@@ -11,83 +11,73 @@ order: 4
 ---
 
 ## 🚀 Professional Summary
-I am a Cloud Engineer specialized in **Azure Architecture**, **Identity Security**, and **Modern AI Operations**. With a proven track record of managing global-scale infrastructures (Gunvor, Trendyol), I bridge the gap between complex enterprise requirements and high-performance cloud solutions. My current focus is on **Infrastructure-as-Code (Bicep/DevOps)** and **Enterprise AI Agent** development.
+Working at the intersection of **Azure architecture** and **enterprise operations**, I specialize in bridging the gap between high-level design and reliable, large-scale implementation. I combine the management of **highly regulated environments** with **targeted advisory engagements**, ensuring that complex infrastructure challenges are addressed with solutions that are not only secure and compliant but also operationally resilient.
 
 ---
 
-## 🛠 Tech Stack & Expertise
+## 🛠 Cloud Tech Stack & Expertise
 
-I combine high-level architectural design with hands-on technical excellence across these core domains:
+While I have a deep background in infrastructure, my current professional focus is dedicated to the Cloud ecosystem:
 
-### <i class="fab fa-microsoft"></i> Cloud & Platform Engineering
-* **Microsoft Azure:** Expert-level administration, ASR, Networking, and Secure Storage.
-* **DevOps & IaC:** CI/CD pipelines, **Bicep**, and automation via **PowerShell**.
-* **Infrastructure:** VMware vSphere/Horizon (Global), Active Directory, Intune, and SCCM.
+### <i class="fab fa-microsoft"></i> Azure Infrastructure
+* **Cloud Architecture:** Design and management of Virtual Networking, Secure Storage (Files/Blob), and resource governance for EA/CSP customers.
+* **Business Continuity:** Implementing large-scale Disaster Recovery and migration strategies using **Azure Site Recovery (ASR)**.
+* **Governance & Cost:** Enforcing policies, resource right-sizing, and cost optimization within Microsoft Defender for Cloud.
 
-### <i class="fas fa-shield-alt"></i> Security, Identity & Compliance
-* **IAM & Entra ID:** RBAC, PIM (Just-In-Time), Conditional Access, and Identity Governance.
-* **Microsoft Purview:** Data Loss Prevention (DLP), eDiscovery, and Retention management.
-* **Security Operations:** Defender for Cloud and Information Security Administration.
+### <i class="fas fa-shield-alt"></i> Identity & Access Management (IAM)
+* **Microsoft Entra ID:** Advanced orchestration of **RBAC**, **Privileged Identity Management (PIM)**, and Identity Governance.
+* **Security Models:** Designing **Conditional Access** policies, MFA, and "Least Privilege" access frameworks for enterprise tenants.
 
-### <i class="fas fa-robot"></i> AI & Future Tech
-* **Microsoft Copilot Studio:** Building and deploying enterprise-ready agents.
-* **Azure AI:** Implementing and managing AI-driven cloud workloads.
+### <i class="fas fa-code"></i> Automation & IaC
+* **Infrastructure as Code:** Developing modular and reusable deployments using **Bicep** to ensure cross-subscription consistency.
+* **Cloud Automation:** Utilizing **PowerShell** and serverless workflows to automate identity monitoring and platform health checks.
+* **Modern Workplace:** Managing cloud-based identities and endpoints via **Microsoft 365** and **Intune**.
 
 ---
 
-## 📜 Professional Certifications
+## 📜 Certifications and Applied Skills
 
-I hold an extensive list of **Microsoft Expert and Associate** certifications, demonstrating a deep expertise in the cloud ecosystem.
-
-### <i class="fas fa-award"></i> Expert & Specialized
-* **Microsoft Certified: DevOps Engineer Expert**
+### <i class="fas fa-award"></i> Expert Level
 * **Microsoft 365 Certified: Administrator Expert**
-* **Microsoft Certified: Azure AI Engineer Associate**
-* **Build/Deploy Enterprise Agents with Copilot Studio** (Accredited)
 
-### <i class="fas fa-user-shield"></i> Security & Compliance
+### <i class="fas fa-user-shield"></i> Security & Identity
 * **Microsoft Certified: Azure Security Engineer Associate**
-* **Microsoft Certified: Information Security Administrator Associate**
+* **Identities and Access using Microsoft Entra**
 * **Microsoft Certified: Security, Compliance, and Identity Fundamentals**
-* **Microsoft Purview Specialist:** (DLP, Information Protection, eDiscovery)
 
-### <i class="fas fa-cloud"></i> Infrastructure & Administration
+### <i class="fas fa-cloud"></i> Azure Administration
 * **Microsoft Certified: Azure Administrator Associate**
-* **Microsoft 365 Certified: Messaging Administrator Associate**
-* **Administering Active Directory Domain Services**
 * **Azure Networking & Secure Storage Specialist**
 
 ---
 
-## 💼 Experience
+## 💼 Professional Experience
 
 ### **Cloud Technologies Consultant** | D724 IT Services Inc.
 *Dec 2025 – Present*
-* **Architecture:** Delivering technical deep-dives for EA and CSP customers.
-* **Observability:** Built custom alerting via **Zabbix** & **Azure Logic Apps** for RPO/PITR compliance.
-* **Disaster Recovery:** Leading DR preparedness and large-scale failover testing.
+* Providing technical deep-dives and architecture guidance for enterprise **EA and CSP** customers.
+* Engineering custom cloud observability for RPO/PITR compliance using **Azure Logic Apps**.
 
 ### **Gunvor Group**
 *Dec 2022 – Dec 2025 (3 years 1 month)*
 
 #### **Cloud Engineer** *(Jan 2024 – Dec 2025)*
-* **Entra ID Lead:** Focal point for identity security, RBAC, PIM, and MFA policies.
-* **Automation:** Implemented multi-subscription deployments using **Bicep** and PowerShell.
-* **Governance:** Managed cost control, resource right-sizing, and Defender for Cloud.
+* Acted as the focal point for **Entra ID** and **Bicep** IaC deployments across multiple subscriptions.
+* Focused on identity security, PIM (Just-In-Time) access, and cloud cost management.
 
 #### **System Engineer** *(Dec 2022 – Dec 2023)*
-* **Global Virtualization:** Managed global **VMware** clusters across 8+ international datacenters.
-* **Hybrid Infrastructure:** Administered AD, PKI, SCCM, and Intune for global operations.
+* Managed global virtualization and hybrid infrastructure across 8+ international datacenters.
+* Supported critical services including AD, DNS, PKI, SCCM, and Intune.
 
 ### **System Engineer** | Trendyol Group
 *Sep 2021 – Dec 2022*
-* Managed infrastructure for **300+ branches** and 8 sorting centers serving 3000+ employees.
-* Maintained thousands of Windows VMs and **FortiGate** firewalls for 24/7 uptime.
+* Managed system and network infrastructures for **300+ branches** and 8 sorting centers serving 3000+ employees.
+* Configured and maintained thousands of virtual machines and security appliances.
 
-### **Previous Professional Roles**
-* **Information Technology Specialist** | Eczacıbaşı Topluluğu (2020–2021)
-* **Information Technology Specialist** | Çelebi Aviation Holding (2019–2020)
-* **IT Specialist** | SkyTouch Consultancy / SuperTAXI (2017–2019)
+### **Information Technology Specialist**
+* **Eczacıbaşı Topluluğu** (Jul 2020 – Sep 2021)
+* **Çelebi Aviation Holding** (Feb 2019 – Jul 2020)
+* **IT Specialist | SkyTouch Consultancy / SuperTAXI** (Oct 2017 – Feb 2019)
 
 ---
 
@@ -104,4 +94,4 @@ I hold an extensive list of **Microsoft Expert and Associate** certifications, d
 ---
 
 > [!TIP]
-> **Key Project:** I developed an **Entra ID Secret & Certificate Expiration Tracker** to automate monitoring and prevent service outages. This is part of my commitment to "Zero Downtime" operations.
+> **Cloud Methodology:** My approach is defined by the principle of **"Cloud-First & Automated-Always."** I leverage Bicep and PowerShell to ensure that enterprise environments are not only scalable but also inherently secure.
