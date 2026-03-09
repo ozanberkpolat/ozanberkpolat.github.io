@@ -1,7 +1,7 @@
 ---
 title: How to Synchronize a Specific Computer Object to Entra ID
 date: 2025-06-11 13:39:00 +0300
-categories: [How To, Azure]
+categories: [How To]
 tags: [Azure, Entra, Aadc]
 ---
 

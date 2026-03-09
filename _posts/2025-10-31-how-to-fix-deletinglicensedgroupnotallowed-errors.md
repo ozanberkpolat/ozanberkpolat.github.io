@@ -1,7 +1,7 @@
 ---
 title: How to Fix DeletingLicensedGroupNotAllowed Errors in Entra Sync
 date: 2025-10-31 12:00:00 +0300
-categories: [How To, Azure]
+categories: [How To]
 tags: [Azure, azure ad connect, troubleshooting, powershell, microsoft graph]
 ---
 

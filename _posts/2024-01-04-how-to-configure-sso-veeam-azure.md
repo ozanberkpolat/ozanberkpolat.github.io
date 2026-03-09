@@ -1,7 +1,7 @@
 ---
 title: How to Configure SSO with Entra in Veeam Backup for Microsoft Azure
 date: 2024-01-04 09:00:00 +0300
-categories: [How To, Azure]
+categories: [How To]
 tags: [sso, veeam, azure-ad, backup, authentication]
 description: Step-by-step guide to integrating Entra ID SSO with Veeam Backup for Microsoft Azure for seamless and secure authentication.
 ---
