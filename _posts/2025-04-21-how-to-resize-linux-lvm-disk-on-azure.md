@@ -2,43 +2,43 @@
 title: How to Resize Linux LVM Disk on Azure
 date: 2025-04-21 09:00:00 +0300
 categories: [How To]
-tags: [linux, lvm, azure, storage, microsoft-entra]
-description: A professional guide on expanding LVM partitions and XFS filesystems on Azure VMs without data loss.
+tags: [linux, lvm, azure, disk-management, xfs, microsoft-entra]
+description: A step-by-step technical guide on expanding LVM-based Linux disks on Azure Virtual Machines without data loss.
 ---
 
-In modern cloud infrastructures, managing disk space dynamically is a critical skill. This guide walks you through the process of expanding a **Logical Volume Manager (LVM)** partition on an Azure Linux VM. We will cover everything from the Azure Portal adjustments to the OS-level filesystem expansion.
+Expanding disk capacity in a cloud environment is a common task, but when using **Logical Volume Manager (LVM)**, it requires a specific sequence of actions to ensure data integrity. In this guide, we will walk through resizing an Azure Managed Disk and reflecting those changes within the Linux OS.
+
+[Image of Linux LVM architecture showing PV, VG, and LV]
 
 ## Prerequisites
 
-Before proceeding, ensure your user has the necessary **Microsoft Entra** (formerly Azure AD) permissions to modify VM disk resources. 
-
-> Before performing partition operations, it is highly recommended to take a snapshot of your managed disk.
-{: .prompt-danger }
+- Ensure you have the necessary permissions in **Microsoft Entra ID** to manage Virtual Machine resources.
+- Access to the **Azure Serial Console**.
+- A full backup or snapshot of your disk is highly recommended before performing partition changes.
 
 ---
 
-## Step 1: Azure Infrastructure Adjustment
+## Phase 1: Azure Portal Operations
 
-The physical disk size must be increased at the Azure fabric level while the VM is in a deallocated state.
+Before the OS can see more space, the physical layer must be expanded.
 
-1. **Stop and Deallocate:** Shut down your VM via the Azure Portal. Ensure the status is **Stopped (deallocated)**.
-2. **Resize Disk:** - Navigate to the **Disks** blade.
-   - Select your target disk.
-   - Go to **Size + performance**.
-   - Update the size and click **Save**.
+1. **Stop and Deallocate:** You must stop the VM from the Azure Portal to change disk sizes. Ensure the status is **Stopped (Deallocated)**.
+2. **Change Disk Size:** - Navigate to the **Disks** blade of your VM.
+   - Select the target disk and go to **Size + performance**.
+   - Increase the size and click **Save**.
 
-## Step 2: OS-Level Partition Modification
+## Phase 2: Operating System Configuration
 
-Once the disk is physically larger, we must inform the Linux kernel and the LVM layer.
+After starting the VM, we need to redistribute the new space across the LVM layers.
 
-### 1. Initial Access and Verification
-Start the VM and connect via **Serial Console** or SSH. Switch to the root user:
+### 1. Verification
+Connect via **Serial Console** and switch to the root user:
 
 ```bash
 sudo su -
 ```
 
-Check the current storage state:
+List your current block devices and LVM status:
 
 ```bash
 lsblk
@@ -46,63 +46,58 @@ pvs
 lvs
 ```
 
-### 2. Update the Partition Table
-We will use `fdisk` to recreate the partition boundaries. 
+### 2. Partition Resizing with `fdisk`
+We need to redefine the partition boundaries for `/dev/sda`.
 
 ```bash
 fdisk /dev/sda
 ```
 
-Inside the `fdisk` interactive prompt, follow these exact keystrokes:
+Follow these exact steps within the `fdisk` prompt:
+- **p**: List partitions.
+- **d**: Delete the partition (usually number `2` for LVM). *Note: This does not delete the data.*
+- **n**: Create a new partition.
+- **Enter**: Use the default partition number (2).
+- **Enter**: Use the default first sector.
+- **Enter**: Use the default last sector (this picks up the new space).
+- **n**: When asked to remove the signature, type **No**.
+- **w**: Write changes and exit.
 
-| Key | Action | Note |
-|:---|:---|:---|
-| `p` | Print | Verify current partition layout |
-| `d` | Delete | Choose partition `2` (does not delete data) |
-| `n` | New | Create a new partition |
-| `Enter` | Default | Use partition number `2` |
-| `Enter` | Default | Use the default first sector |
-| `Enter` | Default | Use the default last sector (full size) |
-| `n` | No | **Do NOT** remove the existing signature |
-| `w` | Write | Save changes and exit |
+> If you accidentally remove the signature, the LVM metadata will be lost. Always select 'No' when prompted.
+{: .prompt-warning }
 
-## Step 3: Expanding LVM and Filesystem
+### 3. Expanding the LVM Layers
+Now, we inform the LVM management layer about the partition change.
 
-Now we expand the Physical Volume (PV), the Logical Volume (LV), and the XFS filesystem.
-
-### 1. Resize Physical Volume
-Inform LVM that the underlying partition `/dev/sda2` has grown:
-
+**Resize the Physical Volume (PV):**
 ```bash
 pvresize /dev/sda2
 ```
 
-### 2. Resize Logical Volume
-We will extend the LV to the target size. Using the `-r` flag helps trigger the filesystem resize automatically for supported types.
-
+**Resize the Logical Volume (LV):**
+We will use the `-r` flag to resize the underlying filesystem automatically.
 ```bash
 lvresize -r -L 180G /dev/rootvg/homelv
 ```
 
-### 3. Grow XFS Filesystem
-If the filesystem didn't automatically expand, manually grow the XFS layer:
-
+**Grow XFS Filesystem:**
+If the filesystem did not expand automatically with the previous command, use:
 ```bash
 xfs_growfs /dev/rootvg/homelv
 ```
 
 ---
 
-## Verification and Results
+## Summary of Changes
 
-After completion, verify the new sizes using `vgs`, `lvs`, and `df -h`.
+By following this workflow, we successfully achieved the following expansion:
 
-**Expansion Summary:**
+| Component | Before Extension | After Extension |
+|:---|:---|:---|
+| **Physical Volume (PV)** | 63 GB | 255 GB |
+| **Logical Volume (LV)** | 1 GB | 180 GB |
 
-* **Initial Physical Volume:** 63 GB  
-* **Initial Logical Volume:** 1 GB  
-* **Final Physical Volume:** 255 GB  
-* **Final Logical Volume:** 180 GB  
+Your Linux environment now has the additional capacity ready for use without a reboot.
 
-> Ensure that your `/etc/fstab` entries remain correct if you added any new mount points during this process.
-{: .prompt-info }
+> Always verify the final state using the `df -h` command to ensure the filesystem reflects the changes.
+{: .prompt-tip }
