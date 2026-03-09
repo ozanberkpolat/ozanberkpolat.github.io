@@ -28,9 +28,6 @@ url: "https://ozanberkpolat.github.io"
 github:
   username: ozanberkpolat # change to your GitHub username
 
-twitter:
-  username: twitter_username # change to your Twitter username
-
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
@@ -59,7 +56,7 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: # fill in your Google Analytics ID
+    id: G-2R66G7C07T
   goatcounter:
     id: ozanberkplt
   umami:
