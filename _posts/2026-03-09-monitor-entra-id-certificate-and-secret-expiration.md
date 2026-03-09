@@ -3,7 +3,7 @@ categories:
 - Azure
 - Entra ID
 - Cloud Automation
-date: 2026-03-09
+date: 2024-08-29
 description: Automate monitoring of expiring Azure Entra ID
   certificates, client secrets, and SAML signing certificates using
   PowerShell, Microsoft Graph, and Azure Functions.
@@ -26,8 +26,8 @@ toc: true
 
 # Monitoring Expiring Certificates and Secrets in Azure Entra ID with PowerShell
 
-As organizations scale their cloud environments, managing **certificates
-and client secrets** becomes a critical responsibility for cloud
+As organizations scale their cloud environments, managing **certificates and client secrets** 
+becomes a critical responsibility for cloud
 administrators. Expired credentials tied to **Azure Entra ID app
 registrations** or **enterprise applications** can quickly lead to
 service outages, authentication failures, and broken integrations.
