@@ -2,7 +2,7 @@
 title: "Entra: The Beating Heart of Azure"
 date: 2025-09-23 11:30:00 +0300
 categories: [Azure, Entra]
-tags: [azure, entra, devops, iam, infrastructure-as-code]
+tags: [azure, entra]
 description: Exploring why Microsoft Entra is the strategic control plane and the security core of modern Azure environments.
 img_path: /assets/img/posts/
 ---

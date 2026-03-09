@@ -10,7 +10,7 @@ description: Automate monitoring of expiring Azure Entra ID
 categories: [Azure, Entra]
 tags:
 - azure
-- entra-id
+- entra
 - powershell
 - automation
 - certificates
