@@ -11,7 +11,7 @@ mermaid: true
 categories: [Azure, Entra]
 tags:
 - azure
-- entra-id
+- entra
 - powershell
 - certificate-expiration
 - secret-expiration
