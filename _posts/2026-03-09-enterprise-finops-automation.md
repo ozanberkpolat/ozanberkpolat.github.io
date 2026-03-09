@@ -2,7 +2,7 @@
 title: "Enterprise-Grade FinOps Automation: Orchestrating Azure Cost Management at Scale"
 date: 2026-03-09 12:00:00 +0300
 categories: [Cloud Governance, Azure]
-tags: [finops, logic-apps, automation, azure-cost-management, office-scripts]
+tags: [finops, logic-apps, automation, azure, azure-cost-management, office-scripts]
 description: A technical deep-dive into a production-hardened Azure Logic App workflow for multi-granular cost reporting using Teams and Office Scripts.
 ---
 
