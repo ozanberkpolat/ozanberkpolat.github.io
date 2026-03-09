@@ -1,7 +1,7 @@
 ---
 title: "Comprehensive Azure Disaster Recovery & Database Restore Test"
 date: 2026-01-23 12:00:00 +0300
-categories: [Azure, Disaster Recovery]
+categories: [Azure]
 tags: [azure, disaster-recovery, oracle, active-directory, powershell]
 description: A detailed walk-through of a comprehensive database and infrastructure restore test in an isolated Azure environment.
 ---

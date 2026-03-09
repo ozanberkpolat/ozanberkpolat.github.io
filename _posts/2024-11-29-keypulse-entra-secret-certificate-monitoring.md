@@ -8,7 +8,7 @@ description: Build an automated Azure Entra ID credential monitoring
   system using PowerShell, Azure Functions, Microsoft Graph, Azure Key
   Vault, and Azure Communication Services.
 mermaid: true
-categories: [Azure, Entra]
+categories: [Azure]
 tags:
 - azure
 - entra
