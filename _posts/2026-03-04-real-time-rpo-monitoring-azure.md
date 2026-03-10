@@ -44,11 +44,7 @@ To solve the visibility gap, we moved the logic from waiting for logs to activel
 * **Granular Logic:** We can now calculate the exact delta between the "Last Successful Sync Time" and "Current Time" to identify RPO violations before they become critical.
 
 ### Security First: Managed Identity & RBAC
-In a high-compliance environment, secret management is a major overhead. To eliminate the need for service principals or static tokens:
-1. We utilized a **System-Assigned Managed Identity** for the Logic App.
-2. We assigned the **Reader** role to this identity at the Recovery Services Vault (RSV) scope.
-
-This ensures the "Principle of Least Privilege" is maintained while providing seamless, passwordless authentication.
+In a high-compliance environment, we utilized a **System-Assigned Managed Identity** for the Logic App. By assigning the **Reader** role at the Recovery Services Vault (RSV) scope, we achieved a passwordless, secure authentication flow that satisfies strict banking audits.
 
 ---
 
@@ -66,9 +62,7 @@ Below is the sanitized JSON definition. Note the `authentication` block in the H
                 "inputs": {
                     "uri": "https://management.azure.com/providers/Microsoft.ResourceGraph/resources?api-version=2021-03-01",
                     "method": "POST",
-                    "headers": {
-                        "Content-Type": "application/json"
-                    },
+                    "headers": { "Content-Type": "application/json" },
                     "authentication": {
                         "type": "ManagedServiceIdentity",
                         "audience": "https://management.azure.com"
@@ -88,12 +82,18 @@ Below is the sanitized JSON definition. Note the `authentication` block in the H
 
 ## The Result: Audit-Ready Resilience
 
+Aşağıdaki görselde, Logic App tarafından üretilen ve kritik eşiği aşan sunucuları gösteren örnek bir alarm e-postası yer almaktadır. Bu format, operasyon ekiplerinin sorunu saniyeler içinde teşhis etmesini sağlar.
+
+![ASR RPO Alert Email Screenshot](/assets/img/posts/rpo-alert-email.png)
+_Figure 1: Automated HTML Email report showing VMs exceeding the RPO threshold._
+{: .noshadow }
+
 By switching to an API-based polling mechanism, the bank now has:
 
 1.  **Immediate Visibility:** Automated HTML reports that show exactly which VMs are nearing their RPO limit.
-2.  **Zero-Trust Compliance:** By using Managed Identity and **Microsoft Entra ID**, the solution passes every security audit without rotating credentials.
-3.  **Cost Efficiency:** Using Logic Apps in a Consumption model costs pennies compared to Log Analytics ingestion for high-frequency logs.
+2.  **Zero-Trust Compliance:** By using Managed Identity and **Microsoft Entra ID**, the solution passes security audits without rotating credentials.
+3.  **Cost Efficiency:** Costs pennies compared to Log Analytics ingestion for high-frequency logs.
 
 ## Conclusion
 
-In cloud architecture, the "standard way" isn't always the "right way" for every industry. For high-compliance environments, moving closer to the API layer provides the precision and security required to maintain true operational resilience.
+In high-compliance environments, moving closer to the API layer provides the precision and security required to maintain true operational resilience.
