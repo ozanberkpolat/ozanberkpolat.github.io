@@ -3,7 +3,7 @@ title: "Real-Time RPO Monitoring in Azure: How I Enhanced Disaster Recovery Visi
 date: 2026-03-04 09:00:00 +0300
 categories: [Solution Advisory]
 tags: [azure, monitoring, rpo, compliance, logic-apps, rest-api, security]
-description: "A case study on transitioning from log-based monitoring to a custom API-driven approach to meet high-precision banking standards."
+description: "A case study on transitioning from log-based monitoring to an API-driven approach to meet high-precision banking standards."
 ---
 
 ![Real-Time RPO Monitoring](/assets/img/posts/rpopostimage.png)
@@ -11,7 +11,7 @@ description: "A case study on transitioning from log-based monitoring to a custo
 
 In the financial sector, **resilience** is the currency of trust. When I was tasked with managing the infrastructure for a major European bank, it was clear that their Disaster Recovery (DR) standards required more than just a functional plan—they required absolute, real-time visibility.
 
-This post explores how I helped them transition from a standard Log Analytics approach to a custom API-driven monitoring solution to ensure their Recovery Point Objective (RPO) tracking met the highest possible precision.
+This post explores how I helped them transition from a standard Log Analytics approach to an API-driven monitoring solution to ensure their Recovery Point Objective (RPO) tracking met the highest possible precision.
 
 ## Understanding the Stake: Why Precision Matters
 
