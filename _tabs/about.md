@@ -118,12 +118,13 @@ timeline
 
 • **Real-Time RPO Monitoring Solution** (Mar 2026): Developed API-driven RPO monitoring for a major European bank, transitioning from log-based to real-time monitoring to achieve second-level accuracy in compliance reporting.
 
+> In the financial sector, precision in RPO monitoring is not optional—it's a regulatory requirement. My solutions ensure second-level accuracy in disaster recovery visibility.
+{: .prompt-warning }
+
 • **Automated VM Utilization Reporting** (Mar 2026): Created Logic Apps-based automation for monthly VM resource utilization reports, incorporating CPU, memory, and storage metrics with business-hours filtering for accurate workload analysis.
 
 • **Enterprise FinOps Automation** (Mar 2026): Architected production-hardened cost management workflows using Azure Logic Apps, enabling multi-granular cost reporting and automated Excel report generation for large-scale organizations.
 
-> In the financial sector, precision in RPO monitoring is not optional—it's a regulatory requirement. My solutions ensure second-level accuracy in disaster recovery visibility.
-{: .prompt-warning }
 
 
 ### Previous Roles
