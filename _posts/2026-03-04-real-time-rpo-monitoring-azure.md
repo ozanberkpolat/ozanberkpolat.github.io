@@ -20,14 +20,14 @@ For a financial institution, a high RPO is not just a technical failure—it’s
 
 ## Phase 1: The Standard Approach (Diagnostic Settings)
 
-Our initial architecture followed the traditional Azure monitoring pattern:
+The initial architecture followed the traditional Azure monitoring pattern:
 
-1.  Enable **Diagnostic Settings** on the Recovery Services Vault (RSV).
-2.  Stream logs to a central **Log Analytics Workspace (LAW)**.
-3.  Use **KQL (Kusto Query Language)** to alert on replication health.
+1.  Enabling **Diagnostic Settings** on the Recovery Services Vault (RSV).
+2.  Streaming logs to a central **Log Analytics Workspace (LAW)**.
+3.  Using **KQL (Kusto Query Language)** to alert on replication health.
 
 ### The Reality Check
-While this is excellent for long-term auditing, we hit a wall regarding "Live Accuracy." Log Analytics ingestion involves a delay (latency). By the time a log entry reached the workspace and triggered an alert, the actual RPO status on the production resource might have already changed. 
+While this is excellent for long-term auditing, this solutions hits a wall regarding the "Live Accuracy." Log Analytics ingestion involves a delay (latency). By the time a log entry reached the workspace and triggered an alert, the actual RPO status on the production resource might have already changed. 
 
 > For a bank that needs to report precise data at any given second, "near-real-time" logs weren't "real" enough.
 {: .prompt-warning }
@@ -36,7 +36,7 @@ While this is excellent for long-term auditing, we hit a wall regarding "Live Ac
 
 ## Phase 2: The Architectural Shift to Azure REST API
 
-To solve the visibility gap, we moved the logic from waiting for logs to actively querying the source. We implemented an **Azure Logic App** that communicates directly with the Azure Site Recovery (ASR) provider via the REST API or Resource Graph.
+To solve the visibility gap, we moved the logic from waiting for logs to actively querying the source. We implemented an **Azure Logic App** that communicates directly with the Azure Site Recovery (ASR) provider via the REST API.
 
 ### Why this change was a game-changer:
 
