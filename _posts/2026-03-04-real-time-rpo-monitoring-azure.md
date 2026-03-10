@@ -6,6 +6,9 @@ tags: [azure, monitoring, rpo, compliance, logic-apps, rest-api, security]
 description: "Exploring the architectural shift from standard Log Analytics to a custom REST API-driven approach for precise RPO tracking in high-stakes financial environments."
 ---
 
+![Real-Time RPO Monitoring](/assets/img/posts/rpopostimage.png)
+{: .noshadow }
+
 In the financial sector, **resilience** is the currency of trust. When managing the infrastructure for a major European bank, the stakes for Disaster Recovery (DR) are incredibly high. Regulatory bodies and strict audits require not just a recovery plan, but proven, real-time visibility into data consistency.
 
 This post explores why we transitioned from a standard Log Analytics approach to a custom API-driven monitoring solution for Recovery Point Objective (RPO) tracking.
