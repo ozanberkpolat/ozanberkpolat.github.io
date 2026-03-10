@@ -14,9 +14,6 @@ mermaid: true
 ## 🚀 Professional Summary
 Working at the intersection of **Azure architecture** and **enterprise operations**, I specialize in bridging the gap between high-level design and reliable, large-scale implementation. I combine the management of **highly regulated environments** with **targeted advisory engagements**, ensuring that complex infrastructure challenges are addressed with solutions that are not only secure and compliant but also operationally resilient.
 
-> **Specialization:** Enterprise cloud transformation with a focus on identity, security, and operational excellence in highly regulated industries.
-{: .prompt-note }
-
 ---
 
 ## 🛠 Cloud Tech Stack & Expertise
@@ -32,7 +29,7 @@ graph TB
         A4["📊 Governance<br/>Defender for Cloud"]
     end
 
-    subgraph Identity["<b>🔐 Identity & IAM</b>"]
+    subgraph Identity["<b>🔐 Identity & Security</b>"]
         I1["🔑 Microsoft Entra ID"]
         I2["⏰ PIM<br/>Just-In-Time"]
         I3["📋 RBAC & CAP"]
