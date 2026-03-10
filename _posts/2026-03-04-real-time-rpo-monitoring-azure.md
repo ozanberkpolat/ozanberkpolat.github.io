@@ -64,8 +64,7 @@ Below is the sanitized JSON definition. Note the `authentication` block in the H
                     "method": "POST",
                     "headers": { "Content-Type": "application/json" },
                     "authentication": {
-                        "type": "ManagedServiceIdentity",
-                        "audience": "https://management.azure.com"
+                        "type": "ManagedServiceIdentity"
                     },
                     "body": {
                         "subscriptions": ["<YOUR_SUBSCRIPTION_ID>"],
