@@ -27,7 +27,7 @@ The primary goal was to restore a subset of our production environment into an i
 
 Before initiating any restores, strict network isolation was mandatory.
 
-We verified the Network Security Group (NSG) assigned to the isolated virtual network. All inbound and outbound traffic was blocked by default, with only specific exceptions made later for Remote Desktop Protocol (RDP) access from our secure management subnet (`192.168.33.0/24`) to the Terminal Server. 
+We verified the Network Security Group (NSG) assigned to the isolated virtual network. All inbound and outbound traffic was blocked by default, with only specific exceptions made later for Remote Desktop Protocol (RDP) access from our secure management subnet to the Terminal Server. 
 
 All restored VMs and their associated resources were deployed into a dedicated resource group (`rg-drtest-env`). To ensure stability within the isolated network, all restored VMs were assigned **Static IP addresses** via the Azure Portal.
 
@@ -65,38 +65,14 @@ We also verified the health of the DNS service, the Netlogon service, and the ac
 
 ### Preventing Backup Conflicts
 
-To prevent the restored database from attempting to write to our production backup storage account (`storaclebackupsdr`), the Oracle Backup Service was stopped immediately upon booting the restored VM. 
+To prevent the restored database from attempting to write to our production backup storage account, the Oracle Backup Service was stopped immediately upon booting the restored VM. 
 
 Once halted, we navigated to the Storage Account's Network Settings and granted access to the isolated network's default subnet via a **Service Endpoint**. Only after this strict boundary was established did we re-enable the backup services for testing.
 
 ---
 
-## 4. Execution Log
-
-The actual execution of the plan was closely monitored and timed. Below is the detailed log of the operation:
-
-| Step | Detail | Start Time | End Time | Duration |
-| :--- | :--- | :--- | :--- | :--- |
-| **1** | Verified all traffic blocked at NSG level. | 12:15:00 | 12:17:00 | 0:02:00 |
-| **2** | `vm-identity-CORE-DC01` (Domain Controller) - Restore started. | 12:18:31 | 12:48:34 | 0:30:03 |
-| **3** | `vm-subsystem-APP-TERM01` (Terminal Server) - Restore started. | 12:33:38 | 12:35:54 | 0:02:16 |
-| **4** | `vm-coreapp-APP-INT01` (Interface Server) - Restore started. | 12:37:13 | 12:39:26 | 0:02:13 |
-| **5** | Changed IP settings of DC01, TERM01, and INT01 to Static. | 12:50:00 | 12:55:00 | 0:05:00 |
-| **6** | `vm-subsystem-APP-TERM01` - Accessed via Local Admin. | 12:57:00 | 12:58:00 | 0:01:00 |
-| **7** | Updated isolated network DNS to the new DC IP (`192.168.36.6`). | 12:59:00 | 13:00:00 | 0:01:00 |
-| **8** | Added rule `101` to NSG. | 13:16:00 | 13:18:00 | 0:02:00 |
-| **9** | Added rule `102` to NSG. | 13:20:00 | 13:22:00 | 0:02:00 |
-| **10** | `vm-coredb-CORE-DB01` (Oracle DB) - Disk snapshots taken. | 13:30:00 | 13:30:00 | 0:00:00 |
-| **11** | `vm-coredb-CORE-DB01` - Snapshots converted to new disks. | 13:30:00 | 13:31:00 | 0:01:00 |
-| **12** | `vm-coredb-CORE-DB01` - Restore started. | 13:31:50 | 13:34:13 | 0:02:23 |
-| **13** | `vm-coredb-CORE-DB01` - VM stopped immediately after booting. | 13:35:00 | 13:35:00 | 0:00:00 |
-| **14** | `vm-coredb-CORE-DB01` - New data disks attached. | 13:37:00 | 13:39:00 | 0:02:00 |
-| **15** | `vm-coredb-CORE-DB01` - IP set to Static. | 13:39:00 | 13:40:00 | 0:01:00 |
-| **16** | Added rule `103` to NSG. | 13:41:00 | 13:42:00 | 0:01:00 |
-| **17** | `vm-coredb-CORE-DB01` - VM started for final validation. | 13:42:00 | 13:45:00 | 0:03:00 |
-
-## 5. Post-Test Cleanup
+## 4. Post-Test Cleanup
 
 A crucial part of any DR test is the teardown. Leaving test resources running not only incurs unnecessary cloud costs but also introduces potential security and operational risks. 
 
-Once the Database Administrators completed their application-level validations, the environment was decommissioned. We completely deleted the restored VMs, their associated disks, network interfaces, and the temporary resource group. Finally, the Service Endpoint definitions on the `storaclebackupsdr` Storage Account were removed, returning the environment to its original state.
+Once the Database Administrators completed their application-level validations, the environment was decommissioned. We completely deleted the restored VMs, their associated disks, network interfaces, and the temporary resource group. Finally, the Service Endpoint definitions on the backup DR Storage Account were removed, returning the environment to its original state.
