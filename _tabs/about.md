@@ -96,36 +96,35 @@ timeline
 ### Current Role: **Cloud Technologies Consultant** | D724 IT Services Inc.
 *Dec 2025 – Present*
 
-✨ **Key Achievements:**
-* Architecting **RPO/PITR compliance monitoring** for enterprise-scale disaster recovery operations
-* Delivering technical deep-dives for **EA and CSP customers** on Azure cloud transformation
-* Engineering **custom cloud observability solutions** using Azure Logic Apps and REST APIs
+🔧 **Key Responsibilities & Achievements:**
+
+• **Technical Advisory & Solution Design:** Delivering technical deep dives, architecture guidance, and targeted solution design for EA and CSP customers, addressing complex challenges through high-level technical advisory.
+
+• **Advisory Engagements:** Leading short-cycle advisory engagements to analyze customer challenges and provide secure, compliant, and actionable remediation recommendations.
+
+• **Operational Management:** Providing end-to-end operational management of highly regulated Azure environments, overseeing solution design and continuous improvement to ensure platform stability and cost efficiency.
+
+• **Disaster Recovery Leadership:** Leading disaster recovery preparedness by developing comprehensive recovery plans and orchestrating large-scale failover testing, while ensuring 100% backup coverage for both existing and newly provisioned workloads.
+
+• **Enterprise Observability:** Engineering enterprise-grade observability and bespoke alerting mechanisms to address platform "blind spots"; utilizing Zabbix with custom templates for monitoring and Azure Logic Apps to architect custom alerting mechanisms for things such as tracking RPO thresholds and PITR compliance.
+
+• **Automated Reporting:** Automating the delivery of both standard and custom-tailored reports, establishing streamlined and actionable visibility for technical and business stakeholders.
+
+📝 **Recent Projects & Publications:**
+
+• **Video Content Delivery Architecture** (Jan 2026): Designed and implemented secure video streaming solutions using Azure Front Door and Blob Storage for large banking applications, ensuring high-performance content delivery with advanced security controls.
+
+• **Comprehensive Disaster Recovery Testing** (Jan 2026): Led full-scale database and infrastructure restore testing in isolated Azure environments, validating recovery procedures for Oracle databases and Active Directory components.
+
+• **Real-Time RPO Monitoring Solution** (Mar 2026): Developed API-driven RPO monitoring for a major European bank, transitioning from log-based to real-time monitoring to achieve second-level accuracy in compliance reporting.
+
+• **Automated VM Utilization Reporting** (Mar 2026): Created Logic Apps-based automation for monthly VM resource utilization reports, incorporating CPU, memory, and storage metrics with business-hours filtering for accurate workload analysis.
+
+• **Enterprise FinOps Automation** (Mar 2026): Architected production-hardened cost management workflows using Azure Logic Apps, enabling multi-granular cost reporting and automated Excel report generation for large-scale organizations.
 
 > In the financial sector, precision in RPO monitoring is not optional—it's a regulatory requirement. My solutions ensure second-level accuracy in disaster recovery visibility.
 {: .prompt-warning }
 
----
-
-### Previous Role: **Cloud Engineer** | Gunvor Group
-*Jan 2024 – Dec 2025*
-
-🔧 **Core Responsibilities:**
-* Focal point for **Entra ID administration** across multiple production subscriptions
-* **Infrastructure as Code (Bicep)** deployment pipeline standardization
-* **PIM governance** and Just-In-Time access policy design
-* Cloud cost optimization and resource right-sizing
-
----
-
-### Previous Role: **System Engineer** | Gunvor Group
-*Dec 2022 – Dec 2023*
-
-🏗️ **Scope:**
-* Global virtualization management across **8+ international datacenters**
-* Critical service administration: **AD, DNS, PKI, SCCM, Intune**
-* Infrastructure modernization initiative (hybrid to cloud transition)
-
----
 
 ### Previous Roles
 
