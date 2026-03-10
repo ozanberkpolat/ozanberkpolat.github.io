@@ -141,19 +141,6 @@ timeline
 | Çelebi Aviation Holding | IT Specialist | Feb 2019 – Jul 2020 | Aviation IT operations |
 | SkyTouch / SuperTAXI | IT Specialist | Oct 2017 – Feb 2019 | Startup IT infrastructure |
 
----
-
-## 🎓 Education
-
-```mermaid
-graph LR
-    A["🎓 Anadolu University<br/>General Education Focus"] --> C["🚀 Career Start"]
-    B["🎓 Bahcesehir University<br/>Advanced IT Specialization"] --> C
-    C --> D["✨ Continuous Learning<br/>Microsoft Certifications"]
-    style A fill:#4a69bd,color:#fff
-    style B fill:#4a69bd,color:#fff
-    style D fill:#11784f,color:#fff
-```
 
 ---
 
