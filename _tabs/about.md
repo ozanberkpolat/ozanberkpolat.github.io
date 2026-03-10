@@ -7,14 +7,13 @@ mermaid: true
 ---
 
 # Ozan Berk Polat
-**Cloud Consultant / Cloud Engineer** 📍 Istanbul, Türkiye
+**Cloud Consultant / Cloud Engineer** 📍 Istanbul, Turkey
 
 ---
 
 ## 🚀 Professional Summary
 Working at the intersection of **Azure architecture** and **enterprise operations**, I specialize in bridging the gap between high-level design and reliable, large-scale implementation. I combine the management of **highly regulated environments** with **targeted advisory engagements**, ensuring that complex infrastructure challenges are addressed with solutions that are not only secure and compliant but also operationally resilient.
 
-> [!NOTE]
 > **Specialization:** Enterprise cloud transformation with a focus on identity, security, and operational excellence in highly regulated industries.
 {: .prompt-note }
 
@@ -78,7 +77,6 @@ graph TB
 | **Microsoft 365** | M365 Administrator Expert | ✅ Active |
 | **Fundamentals** | Security, Compliance & Identity Fundamentals | ✅ Active |
 
-> [!TIP]
 > My certifications reflect my strategic focus on **identity-first security** and **infrastructure resilience** across enterprise environments.
 {: .prompt-tip }
 
@@ -106,7 +104,6 @@ timeline
 * Delivering technical deep-dives for **EA and CSP customers** on Azure cloud transformation
 * Engineering **custom cloud observability solutions** using Azure Logic Apps and REST APIs
 
-> [!WARNING]
 > In the financial sector, precision in RPO monitoring is not optional—it's a regulatory requirement. My solutions ensure second-level accuracy in disaster recovery visibility.
 {: .prompt-warning }
 
@@ -137,6 +134,8 @@ timeline
 
 | **Company** | **Position** | **Period** | **Focus** |
 |:---|:---|:---|:---|
+| Gunvor Group | Cloud Engineer | Jan 2024 – Dec 2025 | Azure & Entra ID, Bicep IaC |
+| Gunvor Group | System Engineer | Dec 2022 – Dec 2023 | Global virtualization, Hybrid cloud |
 | Trendyol Group | System Engineer | Sep 2021 – Dec 2022 | 300+ branches, Global infrastructure |
 | Eczacıbaşı Topluluğu | IT Specialist | Jul 2020 – Sep 2021 | Enterprise IT support |
 | Çelebi Aviation Holding | IT Specialist | Feb 2019 – Jul 2020 | Aviation IT operations |
@@ -165,8 +164,8 @@ graph TB
     A["Ozan Berk Polat"] --> B["LinkedIn"]
     A --> C["GitHub"]
     A --> D["Email"]
-    B --> B1["in/ozan-berk-polat"]
-    C --> C1["ozanberkpolat.github.io"]
+    B --> B1["[in/ozan-berk-polat](https://www.linkedin.com/in/ozan-berk-polat/)"]
+    C --> C1["[ozanberkpolat.github.io](https://ozanberkpolat.github.io/)"]
     D --> D1["ozanberkplt@gmail.com"]
     style A fill:#0078d4,color:#fff
     style B fill:#0a66c2,color:#fff
@@ -183,14 +182,15 @@ quadrantChart
     title My Cloud Philosophy
     x-axis Manual --> Automated
     y-axis Reactive --> Proactive
-    Cloud-First & Automated-Always: 0.9, 0.95
-    Bicep IaC Strategy: 0.85, 0.9
-    Identity-First Security: 0.8, 0.88
-    Least Privilege Access: 0.75, 0.85
+    Cloud-First & Automated-Always: [0.9, 0.95]
+    Bicep IaC Strategy: [0.85, 0.9]
+    Identity-First Security: [0.8, 0.88]
+    Least Privilege Access: [0.75, 0.85]
 ```
 
-> [!TIP]
 > **Core Principle:** My approach is defined by **"Cloud-First & Automated-Always."** I leverage **Bicep** and **PowerShell** to ensure that enterprise environments are not only scalable but also inherently secure and compliant by design.
+> 
+> **Vision:** My vision is to automate any repetitive, error-prone, or tedious tasks wherever possible, and focus on creating architectural designs to solve customer problems.
 {: .prompt-tip }
 
 ---
@@ -201,7 +201,7 @@ quadrantChart
 - **Generative AI Integration** in cloud governance workflows  
 - **Zero-Trust Architecture** implementation at enterprise scale
 - Thought leadership on **identity-centric security** in hybrid cloud environments
+- **Solution Architect Role:** To become a solution architect who possesses technical expertise in most Azure services and can design architectures that provide accurate solutions to customer requirements
 
-> [!NOTE]
 > The cloud is not just infrastructure—it's a platform for **innovation**, **resilience**, and **transformation**. I'm committed to helping organizations unlock its full potential.
 {: .prompt-note }
