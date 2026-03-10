@@ -17,7 +17,7 @@ You can build the cleanest IaC templates, automate entire environments, and appl
 
 That’s why, for my first post back, I want to focus on **why Entra is the beating heart of Azure** — and how we should be treating it if we want our cloud to be secure, resilient, and future-ready.
 
-![Entra Hub Visual](/assets/img/entra.png) 
+![Entra Hub Visual](/assets/img/posts/entra.png) 
 _Entra acts as the central hub for identity in Azure._
 
 ---

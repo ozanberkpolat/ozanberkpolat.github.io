@@ -64,7 +64,7 @@ Once the Excel file is fully hydrated, the workflow moves to the final stage:
 2.  **Send an email (V2):** Delivers the report to stakeholders. The email body is professionally styled with HTML/CSS, providing a summary of the insights while attaching the granular Excel report for deep-dive analysis.
 
 ---
-![Entra Hub Visual](/assets/img/cost-analysis.png) 
+![Entra Hub Visual](/assets/img/posts/cost-analysis.png) 
 _Entra acts as the central hub for identity in Azure._
 ---
 
