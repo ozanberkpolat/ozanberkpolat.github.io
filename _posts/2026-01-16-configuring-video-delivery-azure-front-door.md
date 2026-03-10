@@ -1,12 +1,12 @@
 ---
 title: Configuring Video Delivery via Azure Front Door and Blob Storage
 date: 2026-01-16 10:00:00 +0300
-categories: [Consulting]
+categories: [Solution Advisory]
 tags: [azure, azure-front-door, blob-storage, cdn, video-streaming, security, csp-ea]
 description: A comprehensive guide on how to securely and efficiently deliver public video content to mobile applications using Azure Front Door and Blob Storage for a large bank.
 ---
 
-Welcome back! Today, we are diving into a highly requested real-world cloud architecture scenario: building a robust, secure, and high-performance video distribution pipeline for a large bank's mobile application. 
+Today, we are diving into a highly requested real-world cloud architecture scenario: building a robust, secure, and high-performance video distribution for a large bank's mobile application. 
 
 When dealing with financial institutions, security and performance cannot be compromised. This guide outlines the necessary configuration steps to serve public video content securely from Azure Blob Storage through Azure Front Door directly to mobile clients.
 

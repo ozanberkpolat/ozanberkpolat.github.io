@@ -7,7 +7,7 @@ date: 2024-08-29
 description: Automate monitoring of expiring Azure Entra ID
   certificates, client secrets, and SAML signing certificates using
   PowerShell, Microsoft Graph, and Azure Functions.
-categories: [Azure]
+categories: [Entra ID]
 tags:
 - azure
 - entra
