@@ -1,6 +1,6 @@
 ---
 title: How to Resize Linux LVM Disk on Azure
-date: 2025-04-21 09:00:00 +0300
+date: 2025-01-21 09:00:00 +0300
 categories: [How To]
 tags: [linux, lvm, azure, disk-management, xfs, microsoft-entra]
 description: A step-by-step technical guide on expanding LVM-based Linux disks on Azure Virtual Machines without data loss.
