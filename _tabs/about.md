@@ -6,7 +6,7 @@ order: 4
 mermaid: true
 ---
 
-![Ozan Berk Polat](/assets/img/avatar.jpg){: style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover; display: block; margin: 0 auto; margin-bottom: 20px;" }
+![Ozan Berk Polat](/assets/img/avatar.jpg) 
 
 # Ozan Berk Polat
 **Cloud Consultant / Cloud Engineer** 📍 Istanbul, Turkey
