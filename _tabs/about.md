@@ -271,18 +271,18 @@ flowchart TB
 
 ```mermaid
 quadrantChart
-    title Cloud Consulting Philosophy
-    x-axis Tactical Support --> Strategic Partnership
-    y-axis Reactive Assistance --> Proactive Guidance
+    title Azure Platform Engagement Model
+    x-axis Platform Operations --> Architecture & Solution Advisory
+    y-axis Reactive Requests --> Proactive Cloud Strategy
 
-    Trusted Advisor Approach: [0.92, 0.94]
-    Enterprise Architecture Alignment: [0.88, 0.91]
-    Cloud Governance & Landing Zones: [0.86, 0.89]
-    Security & Compliance by Design: [0.84, 0.90]
-    EA/CSP Engagement Advisory: [0.82, 0.87]
-    FinOps & Cost Optimization: [0.80, 0.85]
-    Platform Reliability & Risk Reduction: [0.83, 0.88]
-    Knowledge Transfer & Enablement: [0.78, 0.86]
+    Azure Platform Management: [0.30, 0.40]
+    Tenant & Subscription Governance: [0.50, 0.65]
+    Cost Governance & FinOps: [0.58, 0.72]
+    Identity & Access Architecture: [0.70, 0.80]
+    Azure Landing Zone Architecture: [0.78, 0.86]
+    Security & Compliance Posture: [0.82, 0.88]
+    Enterprise Architecture Alignment: [0.90, 0.92]
+    Strategic Cloud Advisory: [0.94, 0.95]
 ```
 
 > **Core Principle:** My approach is defined by **"Cloud-First & Automated-Always."** I leverage **Bicep** and **PowerShell** to ensure that enterprise environments are not only scalable but also inherently secure and compliant by design.
