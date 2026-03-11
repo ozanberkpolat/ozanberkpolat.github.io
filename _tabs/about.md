@@ -18,37 +18,36 @@ Working at the intersection of **Azure architecture** and **enterprise operation
 
 ---
 
-## 🛠 Cloud Tech Stack & Expertise
-
-While I have a deep background in infrastructure, my current professional focus is dedicated to the Cloud ecosystem:
+## 💼 Professional Evolution
 
 ```mermaid
-graph TB
-    subgraph Azure["<b>☁️ Azure Infrastructure</b>"]
-        A1["🌐 Virtual Networking"]
-        A2["💾 Secure Storage<br/>Files/Blob"]
-        A3["🔄 Disaster Recovery<br/>Site Recovery ASR"]
-        A4["📊 Governance<br/>Defender for Cloud"]
-    end
-
-    subgraph Identity["<b>🔐 Identity & Security</b>"]
-        I1["🔑 Microsoft Entra ID"]
-        I2["⏰ PIM<br/>Just-In-Time"]
-        I3["📋 RBAC & CAP"]
-        I4["🛡️ Access Reviews"]
-    end
-
-    subgraph Automation["<b>⚙️ Automation & IaC</b>"]
-        AU1["📝 Bicep IaC"]
-        AU2["🔧 PowerShell"]
-        AU3["📱 Logic Apps"]
-        AU4["☁️ Azure Functions"]
-    end
-
-    style Azure fill:#0078d4,color:#fff
-    style Identity fill:#107c10,color:#fff
-    style Automation fill:#7f39fb,color:#fff
+timeline
+    title Career Timeline
+    2017 : IT Specialist @ SuperTAXI : SkyTouch Consultancy
+    2019 : IT Specialist @ Çelebi Aviation Holding
+    2020 : IT Specialist @ Eczacıbaşı Topluluğu
+    2021 : System Engineer @ Trendyol Group
+    2022 : System Engineer @ Gunvor Group : Virtualization & Hybrid Cloud
+    2024 : Cloud Engineer @ Gunvor Group : Azure & Entra ID Focus
+    2025 : Cloud Consultant @ D724 IT Services : Enterprise Architecture
 ```
+
+---
+
+
+## 📜 Certifications
+
+| **Certification** | **Status** |
+|:---|:---|
+| Azure Administrator Associate | ✅ Active |
+| Azure Security Engineer Associate | ✅ Active |
+| Microsoft Entra Specialist | ✅ Active |
+| M365 Administrator Expert | ✅ Active |
+| Security, Compliance & Identity Fundamentals | ✅ Active |
+
+> My certifications reflect my strategic focus on **identity-first security** and **infrastructure resilience** across enterprise environments.
+{: .prompt-tip }
+
 ---
 
 ## 🚦 How I Rate Myself
@@ -192,35 +191,7 @@ Let's be real. Nobody knows everything in the cloud. Here is how I break down my
 
 </details>
 
-
-## 📜 Certifications
-
-| **Certification** | **Status** |
-|:---|:---|
-| Azure Administrator Associate | ✅ Active |
-| Azure Security Engineer Associate | ✅ Active |
-| Microsoft Entra Specialist | ✅ Active |
-| M365 Administrator Expert | ✅ Active |
-| Security, Compliance & Identity Fundamentals | ✅ Active |
-
-> My certifications reflect my strategic focus on **identity-first security** and **infrastructure resilience** across enterprise environments.
-{: .prompt-tip }
-
 ---
-
-## 💼 Professional Evolution
-
-```mermaid
-timeline
-    title Career Timeline
-    2017 : IT Specialist @ SuperTAXI : SkyTouch Consultancy
-    2019 : IT Specialist @ Çelebi Aviation Holding
-    2020 : IT Specialist @ Eczacıbaşı Topluluğu
-    2021 : System Engineer @ Trendyol Group
-    2022 : System Engineer @ Gunvor Group : Virtualization & Hybrid Cloud
-    2024 : Cloud Engineer @ Gunvor Group : Azure & Entra ID Focus
-    2025 : Cloud Consultant @ D724 IT Services : Enterprise Architecture
-```
 
 ### Current Role: **Cloud Technologies Consultant** | D724 IT Services Inc.
 *Dec 2025 – Present*
@@ -272,19 +243,33 @@ timeline
 
 ## 📧 Connect & Collaborate
 
+## 📧 Connect & Collaborate
+
 ```mermaid
 graph TB
     A["Ozan Berk Polat"] --> B["LinkedIn"]
     A --> C["GitHub"]
     A --> D["Email"]
-    B --> B1["[in/ozan-berk-polat](https://www.linkedin.com/in/ozan-berk-polat/)"]
-    C --> C1["[ozanberkpolat.github.io](https://ozanberkpolat.github.io/)"]
-    D --> D1["ozanberkplt@gmail.com"]
+    
+    B1["in/ozan-berk-polat"]
+    C1["ozanberkpolat.github.io"]
+    D1["ozanberkplt@gmail.com"]
+
+    B --> B1
+    C --> C1
+    D --> D1
+
+    click B1 "[https://www.linkedin.com/in/ozan-berk-polat/](https://www.linkedin.com/in/ozan-berk-polat/)" "Open LinkedIn Profile"
+    click C1 "[https://ozanberkpolat.github.io/](https://ozanberkpolat.github.io/)" "Visit My Blog"
+    click D1 "mailto:ozanberkplt@gmail.com" "Send me an Email"
+
     style A fill:#0078d4,color:#fff
     style B fill:#0a66c2,color:#fff
     style C fill:#333,color:#fff
     style D fill:#0078d4,color:#fff
-```
+    style B1 fill:#f9f9f9,stroke:#0a66c2
+    style C1 fill:#f9f9f9,stroke:#333
+    style D1 fill:#f9f9f9,stroke:#0078d4
 
 ---
 
