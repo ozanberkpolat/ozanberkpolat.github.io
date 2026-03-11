@@ -53,7 +53,7 @@ graph TB
 
 ## 🚦 How I Rate Myself
 
-Let's be real—nobody knows everything in the cloud. Here is how I break down my comfort zone with different Azure services. As someone working towards a Cloud Solution Architect role, I value infrastructure as code (IaC), operational resilience, and understanding the architectural "why" behind every service:
+Let's be real. Nobody knows everything in the cloud. Here is how I break down my comfort zone with different Azure services. As someone working towards a Cloud Solution Architect role, I value infrastructure as code (IaC), operational resilience, and understanding the architectural "why" behind every service:
 
 | Rating | Proficiency Level Description |
 |:---:|:---|
@@ -191,33 +191,16 @@ Let's be real—nobody knows everything in the cloud. Here is how I break down m
 
 </details>
 
----
 
-### <i class="fab fa-microsoft" style="color: #0078d4;"></i> Azure Infrastructure
-* **Cloud Architecture:** Design and management of Virtual Networking, Secure Storage (Files/Blob), and resource governance for EA/CSP customers.
-* **Business Continuity:** Implementing large-scale Disaster Recovery and migration strategies using **Azure Site Recovery (ASR)**.
-* **Governance & Cost:** Enforcing policies, resource right-sizing, and cost optimization within Microsoft Defender for Cloud.
+## 📜 Certifications
 
-### <i class="fas fa-shield-alt" style="color: #107c10;"></i> Identity & Access Management (IAM)
-* **Microsoft Entra ID:** Advanced orchestration of **RBAC**, **Privileged Identity Management (PIM)**, and Identity Governance.
-* **Security Models:** Designing **Conditional Access** policies, MFA, and "Least Privilege" access frameworks for enterprise tenants.
-
-### <i class="fas fa-code" style="color: #7f39fb;"></i> Automation & IaC
-* **Infrastructure as Code:** Developing modular and reusable deployments using **Bicep** to ensure cross-subscription consistency.
-* **Cloud Automation:** Utilizing **PowerShell** and serverless workflows to automate identity monitoring and platform health checks.
-* **Modern Workplace:** Managing cloud-based identities and endpoints via **Microsoft 365** and **Intune**.
-
----
-
-## 📜 Certifications & Technical Proficiency
-
-| **Domain** | **Certification** | **Status** |
-|:---|:---|:---|
-| **Cloud Administration** | Azure Administrator Associate | ✅ Active |
-| **Cloud Security** | Azure Security Engineer Associate | ✅ Active |
-| **Identity & Access** | Microsoft Entra Specialist | ✅ Active |
-| **Microsoft 365** | M365 Administrator Expert | ✅ Active |
-| **Fundamentals** | Security, Compliance & Identity Fundamentals | ✅ Active |
+| **Certification** | **Status** |
+|:---|:---|
+| Azure Administrator Associate | ✅ Active |
+| Azure Security Engineer Associate | ✅ Active |
+| Microsoft Entra Specialist | ✅ Active |
+| M365 Administrator Expert | ✅ Active |
+| Security, Compliance & Identity Fundamentals | ✅ Active |
 
 > My certifications reflect my strategic focus on **identity-first security** and **infrastructure resilience** across enterprise environments.
 {: .prompt-tip }
