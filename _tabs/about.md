@@ -267,7 +267,7 @@ flowchart TB
 ```
 ---
 
-## 🎯 Cloud Methodology
+## ☁️ Azure Engagement Model
 
 ```mermaid
 quadrantChart
