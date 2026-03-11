@@ -1,7 +1,7 @@
 ---
 title: Resolving Azure Site Recovery (ASR) Kernel Incompatibility on Linux
 date: 2026-03-11 13:12:00 +0300
-categories: [How To, Cloud]
+categories: [How To]
 tags: [azure, linux, asr, kernel, troubleshooting]
 description: A step-by-step guide to fixing the "Site recovery extension does not support the Linux kernel" error by managing kernel versions on Azure Ubuntu VMs.
 ---
