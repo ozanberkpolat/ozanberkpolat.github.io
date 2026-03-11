@@ -248,16 +248,16 @@ flowchart TB
 
     A["👋 Ozan Berk Polat"]
 
-    B["🔗 LinkedIn<br/>in/ozan-berk-polat"]
-    C["💻 GitHub & Blog<br/>ozanberkpolat.github.io"]
-    D["📧 Email<br/>ozanberkplt@gmail.com"]
+    B["🔗 LinkedIn"]
+    C["💻 GitHub & Blog"]
+    D["📧 Email"]
 
     A --> B
     A --> C
     A --> D
 
     click B "https://www.linkedin.com/in/ozan-berk-polat/" "Open LinkedIn Profile"
-    click C "https://ozanberkpolat.github.io/" "Visit My Blog"
+    click C "https://github.com/ozanberkpolat" "Visit My GitHub"
     click D "mailto:ozanberkplt@gmail.com" "Send me an Email"
 
     style A fill:#0078D4,color:#fff,stroke:#005A9E
