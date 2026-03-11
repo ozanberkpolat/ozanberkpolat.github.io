@@ -243,34 +243,28 @@ Let's be real. Nobody knows everything in the cloud. Here is how I break down my
 
 ## 📧 Connect & Collaborate
 
-## 📧 Connect & Collaborate
-
 ```mermaid
-graph TB
-    A["Ozan Berk Polat"] --> B["LinkedIn"]
-    A --> C["GitHub"]
-    A --> D["Email"]
-    
-    B1["in/ozan-berk-polat"]
-    C1["ozanberkpolat.github.io"]
-    D1["ozanberkplt@gmail.com"]
+flowchart TB
 
-    B --> B1
-    C --> C1
-    D --> D1
+    A["👋 Ozan Berk Polat"]
 
-    click B1 "[https://www.linkedin.com/in/ozan-berk-polat/](https://www.linkedin.com/in/ozan-berk-polat/)" "Open LinkedIn Profile"
-    click C1 "[https://ozanberkpolat.github.io/](https://ozanberkpolat.github.io/)" "Visit My Blog"
-    click D1 "mailto:ozanberkplt@gmail.com" "Send me an Email"
+    B["🔗 LinkedIn<br/>in/ozan-berk-polat"]
+    C["💻 GitHub & Blog<br/>ozanberkpolat.github.io"]
+    D["📧 Email<br/>ozanberkplt@gmail.com"]
 
-    style A fill:#0078d4,color:#fff
-    style B fill:#0a66c2,color:#fff
-    style C fill:#333,color:#fff
-    style D fill:#0078d4,color:#fff
-    style B1 fill:#f9f9f9,stroke:#0a66c2
-    style C1 fill:#f9f9f9,stroke:#333
-    style D1 fill:#f9f9f9,stroke:#0078d4
+    A --> B
+    A --> C
+    A --> D
 
+    click B "https://www.linkedin.com/in/ozan-berk-polat/" "Open LinkedIn Profile"
+    click C "https://ozanberkpolat.github.io/" "Visit My Blog"
+    click D "mailto:ozanberkplt@gmail.com" "Send me an Email"
+
+    style A fill:#0078D4,color:#fff,stroke:#005A9E
+    style B fill:#0A66C2,color:#fff
+    style C fill:#24292F,color:#fff
+    style D fill:#0078D4,color:#fff
+```
 ---
 
 ## 🎯 Cloud Methodology
