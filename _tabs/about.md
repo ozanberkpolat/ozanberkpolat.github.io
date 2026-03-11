@@ -55,72 +55,23 @@ graph TB
 
 Let's be real. Nobody knows everything in the cloud. Here is how I break down my comfort zone with different Azure services. As someone working towards a Cloud Solution Architect role, I value infrastructure as code (IaC), operational resilience, and understanding the architectural "why" behind every service:
 
-| Rating | Proficiency Level Description |
-|:---:|:---|
-| <i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> | **1 Star:** No hands-on experience yet. |
-| <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> | **2 Stars:** Understand the core concepts. <br>I can handle basic deployments, standard day-to-day management, <br>and know what business problem the service solves. |
-| <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> | **3 Stars:** Solid operational experience. <br>I can deploy from scratch, troubleshoot existing setups, <br>and weigh the pros and cons when making mid-level architecture decisions. |
-| <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> | **4 Stars:** Enterprise-ready. <br>I can design the architecture, deploy via Bicep/IaC using best practices, <br>and fully optimize, scale, and manage complex production workloads. |
-| <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i> | **5 Stars:** Nobody is perfect :) |
-
-> **Note:** My highest self-rating is 4 stars. The cloud ecosystem is constantly evolving, and a good architect knows there is always more to learn.
-{: .prompt-info }
-
----
-
-## 🛠 The Azure Matrix
-
-*(Click on any category to expand and see my specific service proficiencies)*
+## 🛠 Azure Service Competencies
 
 <details markdown="1">
 <summary><b>🖥 Compute & Containers</b></summary>
 
 | Service | Proficiency |
 |:---|:---|
-| **Azure Virtual Machines (VM)** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| **Azure App Service** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| **Azure Functions (Serverless)** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Kubernetes Service (AKS) | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Virtual Desktop (AVD) | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Container Apps (ACA) | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Container Instances (ACI) | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure VMware Solution (AVS) | <i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-
-</details>
-
-<details markdown="1">
-<summary><b>🌐 Networking</b></summary>
-
-| Service | Proficiency |
-|:---|:---|
-| **Azure Virtual Network (VNet)** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| **Azure Load Balancer** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Application Gateway | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Front Door | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure ExpressRoute | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure VPN Gateway | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Bastion | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Traffic Manager | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure DNS | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Virtual WAN | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-
-</details>
-
-<details markdown="1">
-<summary><b>💾 Storage & BCDR</b></summary>
-
-| Service | Proficiency |
-|:---|:---|
-| **Azure Blob Storage** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| **Azure Files** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| **Azure Managed Disks** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| **Azure Backup** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| **Azure Site Recovery (ASR)** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Queue Storage | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Table Storage | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure NetApp Files | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Elastic SAN | <i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Data Box | <i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Virtual machines** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Virtual machine scale sets** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **App Services** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Function App** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| Azure Virtual Desktop | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| Kubernetes services (AKS) | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| Container Apps | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| Container registries | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| Container instances | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| Availability sets | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
 
 </details>
 
@@ -129,16 +80,35 @@ Let's be real. Nobody knows everything in the cloud. Here is how I break down my
 
 | Service | Proficiency |
 |:---|:---|
-| **Microsoft Entra ID (Core IAM)** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Microsoft Entra ID** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
 | **Microsoft Entra PIM** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
 | **Microsoft Entra Domain Services** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| **Azure Key Vault** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Microsoft Entra ID Protection | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Microsoft Entra ID Protection** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Identity Governance** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Managed Identities** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **App registrations** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Key vaults** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
 | Microsoft Defender for Cloud | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Microsoft Sentinel (SIEM/SOAR) | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Web Application Firewall (WAF) | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure DDoS Protection | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Microsoft Purview | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| Web Application Firewall policies (WAF) | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| Microsoft Sentinel | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+
+</details>
+
+<details markdown="1">
+<summary><b>🌐 Networking</b></summary>
+
+| Service | Proficiency |
+|:---|:---|
+| **Virtual networks** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Network security groups** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **DNS zones** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| Application gateways | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| Load balancers | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| ExpressRoute circuits | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| Virtual network gateways | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| Front Doors | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| Bastions | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| Firewalls | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
 
 </details>
 
@@ -147,47 +117,63 @@ Let's be real. Nobody knows everything in the cloud. Here is how I break down my
 
 | Service | Proficiency |
 |:---|:---|
-| **Azure Monitor / Log Analytics** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| **Azure Policy** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| **Azure Resource Manager & Bicep** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| **Azure Automation** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| **Azure Cost Management & Billing** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| **Azure Arc (Hybrid/Multicloud)** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Policy** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Automation Accounts** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Cost Management + Billing** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Subscriptions** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
 | **Azure Advisor** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| **Azure Resource Graph** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Azure Resource Mover** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Machines - Azure Arc** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
 | Azure Migrate | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Lighthouse | <i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
 
 </details>
 
 <details markdown="1">
-<summary><b>🗄 Databases & Data Stores</b></summary>
+<summary><b>📊 Monitoring & Analytics</b></summary>
 
 | Service | Proficiency |
 |:---|:---|
-| Azure SQL Managed Instance | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure SQL Database | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Cache for Redis | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| SQL Server on Azure VMs | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Cosmos DB | <i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Database for PostgreSQL | <i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Database for MySQL | <i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Database Migration Service | <i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Log Analytics workspaces** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Application Insights** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Alerts** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Metrics** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Azure Workbooks** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| Data factories | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| Managed Prometheus | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| Network Watcher | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
 
 </details>
 
 <details markdown="1">
-<summary><b>🔗 Integration & Messaging</b></summary>
+<summary><b>💾 Storage & BCDR</b></summary>
 
 | Service | Proficiency |
 |:---|:---|
-| **Azure Logic Apps** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| **Azure Communication Services** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure API Management (APIM) | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Service Bus | <i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Event Grid | <i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure Event Hubs | <i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
-| Azure App Configuration | <i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Storage accounts** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Disks** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Recovery Services vaults** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+
+</details>
+
+<details markdown="1">
+<summary><b>🔗 Integration & Web</b></summary>
+
+| Service | Proficiency |
+|:---|:---|
+| **Logic apps** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| **Communication Services** | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| API Management services | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| Service Bus | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+
+</details>
+
+<details markdown="1">
+<summary><b>🛠 DevOps & Misc</b></summary>
+
+| Service | Proficiency |
+|:---|:---|
+| Azure DevOps organizations | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
+| GitHub | <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> |
 
 </details>
 
