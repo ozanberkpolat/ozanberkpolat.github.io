@@ -271,13 +271,18 @@ flowchart TB
 
 ```mermaid
 quadrantChart
-    title My Cloud Philosophy
-    x-axis Manual --> Automated
-    y-axis Reactive --> Proactive
-    Cloud-First & Automated-Always: [0.9, 0.95]
-    Bicep IaC Strategy: [0.85, 0.9]
-    Identity-First Security: [0.8, 0.88]
-    Least Privilege Access: [0.75, 0.85]
+    title Cloud Consulting Philosophy
+    x-axis Tactical Support --> Strategic Partnership
+    y-axis Reactive Assistance --> Proactive Guidance
+
+    Trusted Advisor Approach: [0.92, 0.94]
+    Enterprise Architecture Alignment: [0.88, 0.91]
+    Cloud Governance & Landing Zones: [0.86, 0.89]
+    Security & Compliance by Design: [0.84, 0.90]
+    EA/CSP Engagement Advisory: [0.82, 0.87]
+    FinOps & Cost Optimization: [0.80, 0.85]
+    Platform Reliability & Risk Reduction: [0.83, 0.88]
+    Knowledge Transfer & Enablement: [0.78, 0.86]
 ```
 
 > **Core Principle:** My approach is defined by **"Cloud-First & Automated-Always."** I leverage **Bicep** and **PowerShell** to ensure that enterprise environments are not only scalable but also inherently secure and compliant by design.
