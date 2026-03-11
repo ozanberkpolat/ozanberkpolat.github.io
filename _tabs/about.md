@@ -55,7 +55,22 @@ graph TB
 
 Let's be real. Nobody knows everything in the cloud. Here is how I break down my comfort zone with different Azure services. As someone working towards a Cloud Solution Architect role, I value infrastructure as code (IaC), operational resilience, and understanding the architectural "why" behind every service:
 
-## 🛠 Azure Service Competencies
+| Rating | Proficiency Level Description |
+|:---:|:---|
+| <i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> | **1 Star:** No hands-on experience yet. |
+| <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> | **2 Stars:** Understand the core concepts. <br>I can handle basic deployments, standard day-to-day management, <br>and know what business problem the service solves. |
+| <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> | **3 Stars:** Solid operational experience. <br>I can deploy from scratch, troubleshoot existing setups, <br>and weigh the pros and cons when making mid-level architecture decisions. |
+| <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> | **4 Stars:** Enterprise-ready. <br>I can design the architecture, deploy via Bicep/IaC using best practices, <br>and fully optimize, scale, and manage complex production workloads. |
+| <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i> | **5 Stars:** Nobody is perfect :) |
+
+> **Note:** My highest self-rating is 4 stars. The cloud ecosystem is constantly evolving, and a good architect knows there is always more to learn.
+{: .prompt-info }
+
+---
+
+## 🛠 The Azure Matrix
+
+*(Click on any category to expand and see my specific service proficiencies)*
 
 <details markdown="1">
 <summary><b>🖥 Compute & Containers</b></summary>
