@@ -1,7 +1,7 @@
 ---
 title: Getting Started with Azure API Management
 date: 2025-05-07 12:00:00 +0300
-categories: [How To]
+categories: [Essentials]
 tags: [azure, api management, api, apim]
 description: A comprehensive guide on setting up and configuring Azure API Management, including backend definitions, schema validations, policies, and operations.
 ---
