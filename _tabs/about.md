@@ -49,6 +49,22 @@ graph TB
     style Identity fill:#107c10,color:#fff
     style Automation fill:#7f39fb,color:#fff
 ```
+## 📊 Proficiency Scale
+
+Before diving into the specific services, here is how I evaluate my technical proficiency. I believe in transparency, continuous learning, and infrastructure as code:
+
+| Rating | Proficiency Level Description |
+|:---:|:---|
+| <i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> | **1 Star:** I haven't had the chance to experience it hands-on yet. |
+| <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> | **2 Stars:** Conceptual knowledge; I can explain its capabilities and deploy it at a basic level. |
+| <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> | **3 Stars:** I have deployed and configured it a few times for Dev and Test environments. |
+| <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="far fa-star" style="color: #ffc107;"></i> | **4 Stars:** Deployed multiple times and wrote Bicep templates for it. I can deploy and configure it following best practices. |
+| <i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i><i class="fas fa-star" style="color: #ffc107;"></i> | **5 Stars:** Nobody is perfect :) |
+
+> **Note:** My highest self-rating is 4 stars, as the cloud ecosystem is constantly evolving and there is always room to learn more.
+{: .prompt-info }
+
+---
 
 ### <i class="fab fa-microsoft" style="color: #0078d4;"></i> Azure Infrastructure
 * **Cloud Architecture:** Design and management of Virtual Networking, Secure Storage (Files/Blob), and resource governance for EA/CSP customers.
