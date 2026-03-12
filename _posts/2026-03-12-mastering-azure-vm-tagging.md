@@ -8,20 +8,14 @@ description: A deep dive into a 4-phase maturity model to eliminate tag drift an
 
 In modern cloud management, tagging is the bridge between infrastructure and operations. However, tags are only useful if they represent the actual state of the platform. In this post, I will detail how we transformed our Azure environment through a 4-phase governance maturity model: starting from bulk seeding to automated synchronization and finally strict enforcement.
 
-## The Governance Lifecycle
+### Governance Maturity Model
 
-Below is the high-level flow of our maturity journey:
-
-
-```mermaid
-graph LR
-A["Phase 1<br>Seed"]
-B["Phase 2<br>Sync"]
-C["Phase 3<br>Enforce"]
-D["Phase 4<br>Audit"]
-
-A --> B --> C --> D
-```
+| Phase | Objective | Implementation |
+|------|-----------|---------------|
+| 🟦 **Phase 1 – Seed** | Establish baseline tags | Azure Policy **Modify** |
+| 🟩 **Phase 2 – Sync** | Align tags with platform reality | **Azure Resource Graph + PowerShell** |
+| 🟥 **Phase 3 – Enforce** | Prevent missing governance tags | Azure Policy **Deny** |
+| 🟪 **Phase 4 – Audit** | Continuous compliance monitoring | Azure Policy **Audit** |
 
 ---
 
