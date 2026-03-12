@@ -292,13 +292,5 @@ quadrantChart
 
 ---
 
-## 🔮 Future Focus
-
-- **Advanced FinOps Automation** for multi-region Azure deployments
-- **Generative AI Integration** in cloud governance workflows  
-- **Zero-Trust Architecture** implementation at enterprise scale
-- Thought leadership on **identity-centric security** in hybrid cloud environments
-- **Solution Architect Role:** To become a solution architect who possesses technical expertise in most Azure services and can design architectures that provide accurate solutions to customer requirements
-
 > The cloud is not just infrastructure—it's a platform for **innovation**, **resilience**, and **transformation**. I'm committed to helping organizations unlock its full potential.
 {: .prompt-note }
