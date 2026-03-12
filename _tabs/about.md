@@ -249,7 +249,7 @@ flowchart TB
     A["👋 Ozan Berk Polat"]
 
     B["🔗 LinkedIn"]
-    C["💻 GitHub & Blog"]
+    C["💻 GitHub"]
     D["📧 Email"]
 
     A --> B
