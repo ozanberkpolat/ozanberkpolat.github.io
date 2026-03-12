@@ -12,6 +12,7 @@ In modern cloud management, tagging is the bridge between infrastructure and ope
 
 Below is the high-level flow of our maturity journey:
 
+```mermaid
 flowchart LR
 
 Seed["Phase 1: Seed Inventory"]
