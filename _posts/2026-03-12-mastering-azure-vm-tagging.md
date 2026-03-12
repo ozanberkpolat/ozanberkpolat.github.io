@@ -14,12 +14,11 @@ Below is the high-level flow of our maturity journey:
 
 
 ```mermaid
-flowchart LR
-
-A["Phase 1<br><b>Seed</b><br>Modify Policy"]
-B["Phase 2<br><b>Sync</b><br>Resource Graph"]
-C["Phase 3<br><b>Enforce</b><br>Deny Policy"]
-D["Phase 4<br><b>Audit</b><br>Compliance"]
+graph LR
+A["Phase 1<br>Seed"]
+B["Phase 2<br>Sync"]
+C["Phase 3<br>Enforce"]
+D["Phase 4<br>Audit"]
 
 A --> B --> C --> D
 ```
