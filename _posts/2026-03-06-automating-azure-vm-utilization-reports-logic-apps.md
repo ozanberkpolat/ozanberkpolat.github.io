@@ -1,7 +1,7 @@
 ---
 title: Automating Azure VM Utilization Reports with Logic Apps
 date: 2026-03-06 09:00:00 +0300
-categories: [Logic App]
+categories: [Automation]
 tags: [azure, logic-apps, kql, azure-monitor, log-analytics, reporting, automation]
 description: A step-by-step guide to generating automated monthly VM resource utilization (CPU, RAM, Disk) reports using Azure Logic Apps, Log Analytics, and KQL.
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Mastering Azure VM Tagging: A 4-Phase Maturity Framework for Cloud Governance"
 date: 2026-03-12 14:00:00 +0300
-categories: [Azure]
+categories: [Governance]
 tags: [azure, governance, tagging, audit, compliance]
 description: A deep dive into a 4-phase maturity model to eliminate tag drift and ensure continuous compliance in Azure environments.
 ---
