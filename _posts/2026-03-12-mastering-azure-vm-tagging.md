@@ -12,6 +12,7 @@ In modern cloud management, tagging is the bridge between infrastructure and ope
 
 Below is the high-level flow of our maturity journey:
 
+
 ```mermaid
 flowchart LR
 
@@ -21,6 +22,7 @@ Enforce["Phase 3: Enforce Governance"]
 Audit["Phase 4: Continuous Compliance"]
 
 Seed --> Sync --> Enforce --> Audit
+```
 
 ---
 
