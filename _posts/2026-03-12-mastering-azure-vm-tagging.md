@@ -16,12 +16,12 @@ Below is the high-level flow of our maturity journey:
 ```mermaid
 flowchart LR
 
-Seed["Phase 1: Seed Inventory"]
-Sync["Phase 2: Sync Platform Truth"]
-Enforce["Phase 3: Enforce Governance"]
-Audit["Phase 4: Continuous Compliance"]
+A["Phase 1<br><b>Seed</b><br>Modify Policy"]
+B["Phase 2<br><b>Sync</b><br>Resource Graph"]
+C["Phase 3<br><b>Enforce</b><br>Deny Policy"]
+D["Phase 4<br><b>Audit</b><br>Compliance"]
 
-Seed --> Sync --> Enforce --> Audit
+A --> B --> C --> D
 ```
 
 ---
