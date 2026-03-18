@@ -5,6 +5,12 @@ icon: fas fa-newspaper
 order: 2
 ---
 
-{% assign posts = site.posts | where_exp: "post", "post.categories contains 'News'" %}
-
-{% include post-list.html posts=posts %}
+{% for post in site.posts %}
+  {% if post.categories contains "News" %}
+  <article>
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <p>{{ post.description }}</p>
+    <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+  </article>
+  {% endif %}
+{% endfor %}
