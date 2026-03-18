@@ -2,7 +2,7 @@
 layout: page
 title: News
 icon: fas fa-newspaper
-order: 5
+order: 2
 ---
 
 {% assign news_posts = site.posts | where_exp: "post", "post.categories contains 'News'" %}
