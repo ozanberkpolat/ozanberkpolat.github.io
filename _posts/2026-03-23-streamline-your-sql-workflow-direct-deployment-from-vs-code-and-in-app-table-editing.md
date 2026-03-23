@@ -1,6 +1,6 @@
 ---
 title: "Streamline Your SQL Workflow: Direct Deployment from VS Code & In-App Table Editing"
-date: Invalid DateTime
+date: 2026-03-23
 categories: [News, Azure Updates]
 tags: [azure, sql, vs-code, database-deployment]
 ---
