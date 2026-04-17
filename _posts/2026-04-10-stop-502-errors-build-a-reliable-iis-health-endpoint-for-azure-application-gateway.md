@@ -1,6 +1,6 @@
 ---
 title: "Stop 502 Errors: Build a Reliable IIS Health Endpoint for Azure Application Gateway"
-date: 2026-04-09
+date: 2026-04-10
 categories: [News, Architecture]
 tags: [azure, iis, application-gateway, health-probes, troubleshooting]
 ---

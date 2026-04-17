@@ -1,6 +1,6 @@
 ---
 title: "Unlock Hybrid Cloud Potential: Azure File Sync Updates"
-date: 2026-04-14
+date: 2026-04-15
 categories: [News, Storage]
 tags: [azure, file sync, hybrid cloud]
 ---

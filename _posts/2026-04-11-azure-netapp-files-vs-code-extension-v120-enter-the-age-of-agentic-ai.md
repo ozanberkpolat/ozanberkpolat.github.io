@@ -1,6 +1,6 @@
 ---
 title: "Azure NetApp Files VS Code Extension v1.2.0: Enter the Age of Agentic AI"
-date: 2026-04-10
+date: 2026-04-11
 categories: [News, Cloud Storage]
 tags: [azure, netapp, ai, vscode, agentic-ai]
 ---
