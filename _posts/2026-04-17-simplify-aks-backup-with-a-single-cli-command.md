@@ -1,6 +1,6 @@
 ---
 title: "Simplify AKS Backup with a Single CLI Command"
-date: 2026-04-19
+date: 2026-04-17
 categories: [News, Azure]
 tags: [azure, aks, backup, cli]
 ---

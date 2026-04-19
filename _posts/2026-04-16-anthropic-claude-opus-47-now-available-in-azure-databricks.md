@@ -1,6 +1,6 @@
 ---
 title: "Anthropic Claude Opus 4.7 Now Available in Azure Databricks"
-date: 2026-04-19
+date: 2026-04-16
 categories: [News, AI/ML]
 tags: [azure, databricks, ai-models]
 ---
