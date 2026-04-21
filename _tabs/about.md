@@ -22,7 +22,6 @@ Working at the intersection of Azure architecture and enterprise operations, I s
 
 ```mermaid
 gantt
-    title Career Timeline
     dateFormat  YYYY-MM
     axisFormat  %Y
 
@@ -38,7 +37,7 @@ gantt
     Gunvor Group                  :2024-01, 2025-12
 
     section Cloud Consulting
-    D724                          :2025-12, 2026-04
+    D724                          :2025-12, 2026-12
 ```
 
 ---
