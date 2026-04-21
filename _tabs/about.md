@@ -37,7 +37,7 @@ gantt
     Gunvor Group                  :2024-01, 2025-12
 
     section Cloud Consulting
-    D724                          :2025-12, 2026-12
+    D724 IT Services              :2025-12, 2026-12
 ```
 
 ---
