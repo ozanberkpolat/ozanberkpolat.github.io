@@ -7,14 +7,14 @@ mermaid: true
 ---
 
 # Ozan Berk Polat
-**Cloud Consultant / Cloud Engineer** 📍 Istanbul, Turkey
+**Azure Cloud Consultant | Solution Design & Platform Architecture** 📍 Istanbul, Turkey
 
 ![Ozan Berk Polat](/assets/img/avatar.JPG){: style="width: 800px; max-width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; margin: 0 auto; margin-bottom: 20px; border-radius: 12px;" }
 
 ---
 
 ## 🚀 Professional Summary
-Working at the intersection of **Azure architecture** and **enterprise operations**, I specialize in bridging the gap between high-level design and reliable, large-scale implementation. I combine the management of **highly regulated environments** with **targeted advisory engagements**, ensuring that complex infrastructure challenges are addressed with solutions that are not only secure and compliant but also operationally resilient.
+Working at the intersection of Azure architecture and enterprise operations, I specialize in both long-term platform ownership and project-based technical advisory across a range of industries and customer profiles. From managing the full Azure footprint of a major European bank to designing solutions for customers with complex, time-sensitive challenges, I bring the same mindset to every engagement: secure, compliant, and built to last.
 
 ---
 
@@ -23,7 +23,6 @@ Working at the intersection of **Azure architecture** and **enterprise operation
 ```mermaid
 timeline
     title Career Timeline
-    2017 : IT Specialist @ SuperTAXI : SkyTouch Consultancy
     2019 : IT Specialist @ Çelebi Aviation Holding
     2020 : IT Specialist @ Eczacıbaşı Topluluğu
     2021 : System Engineer @ Trendyol Group
@@ -193,22 +192,20 @@ Let's be real. Nobody knows everything in the cloud. Here is how I break down my
 
 ---
 
-### Current Role: **Cloud Technologies Consultant** | D724 IT Services Inc.
+### Current Role: **Azure Cloud Consultant** | D724 IT Services, A Datamarket Company
 *Dec 2025 – Present*
 
-🔧 **Key Responsibilities & Achievements:**
+🔧 **Key Responsibilities:**
 
-• **Technical Advisory & Solution Design:** Delivering technical deep dives, architecture guidance, and targeted solution design for EA and CSP customers, addressing complex challenges through high-level technical advisory.
+- Architecting and managing the end-to-end Azure platform for a major European bank under a long-running managed services agreement, taking full technical ownership across all aspects of the environment including cost governance, security posture, networking, compute, and infrastructure-as-code delivery using bespoke Bicep templates tailored to the bank's specific requirements.
 
-• **Advisory Engagements:** Leading short-cycle advisory engagements to analyze customer challenges and provide secure, compliant, and actionable remediation recommendations.
+- Continuously driving platform optimization for the bank through structured analysis across cost efficiency, resource governance, and Azure best practices, translating findings into actionable improvements that keep the environment compliant, audit-ready, performant, and future-ready.
 
-• **Operational Management:** Providing end-to-end operational management of highly regulated Azure environments, overseeing solution design and continuous improvement to ensure platform stability and cost efficiency.
+- Leading short-cycle solution design and advisory engagements for EA and CSP customers referred through Datamarket, assessing complex technical challenges and delivering secure, compliant, and actionable architecture recommendations across areas such as cost optimization, network infrastructure, cloud-native communication services, and content delivery.
 
-• **Disaster Recovery Leadership:** Leading disaster recovery preparedness by developing comprehensive recovery plans and orchestrating large-scale failover testing, while ensuring 100% backup coverage for both existing and newly provisioned workloads.
+- Delivering solution design and hands-on technical implementation across diverse industries including automotive, food & beverage, banking, and insurance through project-based engagements, adapting architecture thinking to varied environments, regulatory constraints, and organizational maturity levels.
 
-• **Enterprise Observability:** Engineering enterprise-grade observability and bespoke alerting mechanisms to address platform "blind spots"; utilizing Zabbix with custom templates for monitoring and Azure Logic Apps to architect custom alerting mechanisms for things such as tracking RPO thresholds and PITR compliance.
-
-• **Automated Reporting:** Automating the delivery of both standard and custom-tailored reports, establishing streamlined and actionable visibility for technical and business stakeholders.
+- Collaborating with the Datamarket pre-sales team on technically complex opportunities, contributing to service scoping, effort estimation, and solution positioning where deep Azure expertise is critical to shaping the right commercial outcome.
 
 📝 **Recent Projects & Publications:**
 
@@ -233,10 +230,9 @@ Let's be real. Nobody knows everything in the cloud. Here is how I break down my
 |:---|:---|:---|:---|
 | Gunvor Group | Cloud Engineer | Jan 2024 – Dec 2025 | Azure & Entra ID, Bicep IaC |
 | Gunvor Group | System Engineer | Dec 2022 – Dec 2023 | Global virtualization, Hybrid cloud |
-| Trendyol Group | System Engineer | Sep 2021 – Dec 2022 | 300+ branches, Global infrastructure |
+| Trendyol Group | System Engineer | Sep 2021 – Nov 2022 | 300+ branches, Global infrastructure |
 | Eczacıbaşı Topluluğu | IT Specialist | Jul 2020 – Sep 2021 | Enterprise IT support |
 | Çelebi Aviation Holding | IT Specialist | Feb 2019 – Jul 2020 | Aviation IT operations |
-| SkyTouch / SuperTAXI | IT Specialist | Oct 2017 – Feb 2019 | Startup IT infrastructure |
 
 
 ---
