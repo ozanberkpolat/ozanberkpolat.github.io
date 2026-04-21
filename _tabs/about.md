@@ -21,14 +21,24 @@ Working at the intersection of Azure architecture and enterprise operations, I s
 ## 💼 Professional Evolution
 
 ```mermaid
-timeline
+gantt
     title Career Timeline
-    2019 : IT Specialist @ Çelebi Aviation Holding
-    2020 : IT Specialist @ Eczacıbaşı Topluluğu
-    2021 : System Engineer @ Trendyol Group
-    2022 : System Engineer @ Gunvor Group : Virtualization & Hybrid Cloud
-    2024 : Cloud Engineer @ Gunvor Group : Azure & Entra ID Focus
-    2025 : Cloud Consultant @ D724 IT Services : Enterprise Architecture
+    dateFormat  YYYY-MM
+    axisFormat  %Y
+
+    section IT Support
+    Çelebi Aviation Holding       :2019-02, 2020-07
+    Esan Eczacıbaşı               :2020-07, 2021-09
+
+    section Systems Engineering
+    Trendyol Group                :2021-09, 2022-11
+    Gunvor Group                  :2022-12, 2023-12
+
+    section Cloud Engineering
+    Gunvor Group                  :2024-01, 2025-12
+
+    section Cloud Consulting
+    D724 IT Services              :2025-12, 2026-04
 ```
 
 ---
