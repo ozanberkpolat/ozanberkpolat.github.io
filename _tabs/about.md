@@ -30,8 +30,8 @@ gantt
     Esan Eczacıbaşı               :2020-07, 2021-09
 
     section Systems Engineering
-    Trendyol Group                :2021-09, 2022-11
-    Gunvor Group                  :2022-12, 2023-12
+    Trendyol Group                :2021-09, 2022-12
+    Gunvor Group                  :2022-12, 2024-01
 
     section Cloud Engineering
     Gunvor Group                  :2024-01, 2025-12
