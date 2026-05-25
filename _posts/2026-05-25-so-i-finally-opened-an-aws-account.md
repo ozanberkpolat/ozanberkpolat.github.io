@@ -87,6 +87,6 @@ The challenge with my friend never officially happened. But I think I ended up l
 ---
 
 
-*Here it is [Snip](https://dlfq8gs89k9ue.cloudfront.net/).*
+*Here it is -> [Snip](https://dlfq8gs89k9ue.cloudfront.net/).*
 
 *Made with ❤️ by OBP*
