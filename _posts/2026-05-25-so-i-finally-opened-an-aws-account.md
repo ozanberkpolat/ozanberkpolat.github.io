@@ -85,8 +85,6 @@ But more broadly, I've come to believe that the most useful thing a cloud archit
 
 This is the beginning of that. The module library will grow. The projects will get more complex. Next up: container workloads, managed Kubernetes (EKS vs AKS), and a proper look at identity federation across clouds.
 
-The challenge with my friend never officially happened. But I think I ended up learning what I was supposed to learn from it anyway - just on my own schedule, and with a better reason.
-
 ---
 
 
