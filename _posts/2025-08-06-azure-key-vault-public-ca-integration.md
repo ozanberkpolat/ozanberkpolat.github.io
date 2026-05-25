@@ -1,6 +1,6 @@
 ---
 title: Streamlining Certificate Management - Integrating Public CAs with Azure Key Vault
-date: 2026-08-06 10:00:00 +0300
+date: 2025-08-06 10:00:00 +0300
 categories: [How To]
 tags: [azure, key vault, public certificate]
 description: Learn how to integrate a Public Certificate Authority (CA) with Azure Key Vault to automate the generation and renewal of your SSL/TLS certificates.
