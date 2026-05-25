@@ -16,7 +16,10 @@ This isn't a post about a finished product. It's about the beginning of somethin
 
 Last year, a friend and I made a challenge. He would master Terraform, I would master Bicep, and at some point we'd switch and teach each other everything we'd learned. The kind of plan that sounds great over coffee and quietly stalls when life accelerates.
 
-Life accelerated - fast. On December 15th I started a new job. On December 19th I became a father. Four days apart. The challenge didn't die, it just got buried under things that mattered more. Then on May 20th, AWS announced the general availability of its Istanbul Local Zone, and I finally had both a reason and a quiet evening to get back to it.
+Life accelerated - fast. On December 15th I started a new job. On December 19th I became a father. Four days apart. The challenge didn't die, it just got buried under things that mattered more.
+
+Then on May 20th, AWS announced the general availability of its Istanbul Local Zone, and I finally had both a reason and a quiet evening to get back to it. It didn't take long to realize the two things
+were inseparable: you can't explore AWS seriously without infrastructure as code, and the tool everyone reaches for on AWS is Terraform - which happened to be exactly the half of the challenge I never got to.
 
 I had a clear goal going in: **understand AWS well enough to compare it honestly to Azure, and eventually advise on both without a bias toward either**. Not just deploy things, but understand *why* the platforms make the choices they make - where they converge, and where they genuinely diverge in ways that matter for real decisions.
 
