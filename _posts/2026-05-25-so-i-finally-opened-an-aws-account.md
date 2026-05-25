@@ -50,14 +50,14 @@ Here's a surface-level comparison of every AWS service I used and its Azure coun
 | **CDN / edge** | CloudFront | Azure Front Door | Global PoP coverage, tight S3/Lambda integration, free tier for 12 months | Cache behavior config can be unintuitive | Front Door has WAF + load balancing in one product | CDN Classic is being retired; Front Door is the successor but pricier |
 | **Static hosting** | S3 + CloudFront | Azure Blob + Static Web Apps | Flexible, composable, OAC for private bucket access | No built-in CI/CD pipeline for static sites | Static Web Apps has built-in GitHub Actions deployment, free SSL | Less control over CDN behavior |
 | **Observability** | CloudWatch | Azure Monitor | Logs, metrics, and alarms in one place, Lambda integration is automatic | Insights query language has a learning curve, dashboards feel dated | KQL is powerful once you know it, Application Insights DX is excellent | KQL learning curve, can get expensive at high log volume |
-| **IaC** | Terraform AWS provider | Terraform AzureRM / Bicep | Stable, well-documented, large community | No curated AVM equivalent - more decisions from scratch | Azure Verified Modules (AVM) give opinionated, secure defaults out of the box | AVM is Terraform-only; Bicep has its own module registry (less mature) |
+| **IaC** | Terraform AWS provider | Terraform AzureRM / Bicep | Stable, well-documented, large community | No curated module library equivalent to AVM; more low-level decisions from scratch | Azure Verified Modules (AVM) cover both Terraform and Bicep with opinionated, secure defaults out of the box | Two parallel IaC languages (Terraform AzureRM vs Bicep) with separate ecosystems — no single canonical path |
 | **Identity / access** | IAM | Microsoft Entra ID + Managed Identities | Fine-grained, resource-level policies, inline and managed policies | Steep learning curve, easy to misconfigure, no Resource Group–level scope | Managed Identities are elegant, RBAC at any scope level | Entra ID licensing can be complex for advanced features |
 
 ---
 
 ## First Impressions: AWS Through Azure Eyes
 
-After a few weeks of hands-on time, here's where my head is at - not definitive conclusions, just honest first impressions.
+After a few days of hands-on time, here's where my head is at - not definitive conclusions, just honest first impressions.
 
 **The mental model takes adjustment.** Azure's hierarchy - Subscription → Resource Group → Resource - maps closely to how teams think about ownership, cost, and access. In AWS, the account boundary is the primary isolation unit and IAM is the primary access control layer. Both models work, but they reward different organizational habits. Coming from Azure, I kept looking for the Resource Group equivalent and had to consciously unlearn that instinct.
 
