@@ -1,7 +1,7 @@
 ---
 title: "So I Finally Opened an AWS Account"
 date: 2026-05-25 09:00:00 +0300
-categories: [AWS, Cloud]
+categories: [AWS]
 tags: [aws, terraform, azure, multi-cloud, serverless, iac]
 description: "An Azure-native consultant's honest first impressions of AWS - through a serverless URL shortener and a Terraform module library."
 ---
