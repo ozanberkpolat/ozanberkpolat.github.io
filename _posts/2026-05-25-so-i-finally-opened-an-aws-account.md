@@ -81,9 +81,12 @@ After a few days of hands-on time, here's where my head is at - not definitive c
 
 The Istanbul Local Zone wasn't just a news item. It was a signal that AWS is investing in proximity to Turkish users - which is directly relevant to clients and employers operating in this market. Being able to say "here's what AWS offers locally, here's how it compares to Azure's presence, and here's how you'd architect for each" is a concrete, valuable capability.
 
-But more broadly, I've come to believe that the most useful thing a cloud architect can offer isn't deep expertise in one platform - it's the ability to read a requirement and recommend the right tool without starting from a vendor preference. That takes real time on both sides, not just certifications.
+But more broadly, I've come to believe that the most useful thing a cloud architect can offer isn't just deep expertise in one platform - it's the ability to read a requirement and recommend the right tool without starting from a vendor preference. That takes real time on both sides, not just certifications.
 
-This is the beginning of that. The module library will grow. The projects will get more complex. Next up: container workloads, managed Kubernetes (EKS vs AKS), and a proper look at identity federation across clouds.
+This is the beginning of that.
+The module library will grow.
+The projects will get more complex.
+And the learning will never stop.
 
 ---
 
