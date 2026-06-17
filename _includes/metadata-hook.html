@@ -1,0 +1,122 @@
+<!-- Brand customisation: orange accent + Plus Jakarta Sans typography -->
+<style>
+/* ── Font overrides ── */
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, 'Segoe UI', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', -apple-system, 'Segoe UI', sans-serif;
+}
+code, pre, .filepath {
+  font-family: 'JetBrains Mono', ui-monospace, 'Courier New', monospace;
+}
+kbd {
+  font-family: 'Plus Jakarta Sans', -apple-system, 'Segoe UI', sans-serif;
+}
+
+/* ── Light mode overrides (prefers-color-scheme: light) ── */
+@media (prefers-color-scheme: light) {
+  html:not([data-mode]),
+  html[data-mode='light'] {
+    --main-bg: #fafaf8;
+    --main-border-color: #f0eeea;
+    --site-title-color: #c05800;
+    --sidebar-bg: #f5f3ef;
+    --sidebar-hover-bg: rgba(192, 88, 0, 0.08);
+    --avatar-border-color: #fafaf8;
+    --input-focus-border-color: rgba(192, 88, 0, 0.5);
+    --link-color: #c05800;
+    --link-underline-color: rgba(192, 88, 0, 0.25);
+    --toc-highlight: #c05800;
+    --btn-share-hover-color: #c05800;
+    --checkbox-checked-color: #c05800;
+    --tag-hover: rgba(192, 88, 0, 0.1);
+    --categories-hover-bg: rgba(192, 88, 0, 0.07);
+    --categories-icon-hover-color: #c05800;
+    --timeline-node-bg: rgba(192, 88, 0, 0.55);
+    --prompt-info-bg: rgba(192, 88, 0, 0.07);
+    --prompt-info-icon-color: #c05800;
+    --inline-code-bg: rgba(192, 88, 0, 0.07);
+    --highlighter-rouge-color: #7a3800;
+  }
+  html[data-mode='dark'] {
+    --main-bg: rgb(24 23 22);
+    --main-border-color: rgb(40 38 36);
+    --site-title-color: #ff8000;
+    --sidebar-bg: rgb(16 15 14);
+    --sidebar-active-color: #ff8000;
+    --sidebar-hover-bg: rgba(255, 128, 0, 0.1);
+    --avatar-border-color: rgba(255, 128, 0, 0.35);
+    --input-focus-border-color: rgba(255, 128, 0, 0.5);
+    --link-color: #ff8000;
+    --link-underline-color: rgba(255, 128, 0, 0.3);
+    --toc-highlight: #ff8000;
+    --btn-share-hover-color: #ff8000;
+    --checkbox-checked-color: #ff8000;
+    --tag-hover: rgba(255, 128, 0, 0.12);
+    --categories-hover-bg: rgba(255, 128, 0, 0.1);
+    --categories-icon-hover-color: #ff8000;
+    --timeline-node-bg: rgba(255, 128, 0, 0.65);
+    --prompt-info-bg: rgba(255, 128, 0, 0.12);
+    --prompt-info-icon-color: #ff8000;
+    --footnote-target-bg: rgba(255, 128, 0, 0.15);
+    --inline-code-bg: rgba(255, 128, 0, 0.08);
+    --highlighter-rouge-color: #ffb870;
+    --card-bg: rgb(24 23 22);
+    --highlight-bg-color: rgb(14 13 12);
+  }
+}
+
+/* ── Dark mode overrides (prefers-color-scheme: dark) ── */
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]),
+  html[data-mode='dark'] {
+    --main-bg: rgb(24 23 22);
+    --main-border-color: rgb(40 38 36);
+    --site-title-color: #ff8000;
+    --sidebar-bg: rgb(16 15 14);
+    --sidebar-active-color: #ff8000;
+    --sidebar-hover-bg: rgba(255, 128, 0, 0.1);
+    --avatar-border-color: rgba(255, 128, 0, 0.35);
+    --input-focus-border-color: rgba(255, 128, 0, 0.5);
+    --link-color: #ff8000;
+    --link-underline-color: rgba(255, 128, 0, 0.3);
+    --toc-highlight: #ff8000;
+    --btn-share-hover-color: #ff8000;
+    --checkbox-checked-color: #ff8000;
+    --tag-hover: rgba(255, 128, 0, 0.12);
+    --categories-hover-bg: rgba(255, 128, 0, 0.1);
+    --categories-icon-hover-color: #ff8000;
+    --timeline-node-bg: rgba(255, 128, 0, 0.65);
+    --prompt-info-bg: rgba(255, 128, 0, 0.12);
+    --prompt-info-icon-color: #ff8000;
+    --footnote-target-bg: rgba(255, 128, 0, 0.15);
+    --inline-code-bg: rgba(255, 128, 0, 0.08);
+    --highlighter-rouge-color: #ffb870;
+    --card-bg: rgb(24 23 22);
+    --highlight-bg-color: rgb(14 13 12);
+  }
+  html[data-mode='light'] {
+    --main-bg: #fafaf8;
+    --main-border-color: #f0eeea;
+    --site-title-color: #c05800;
+    --sidebar-bg: #f5f3ef;
+    --sidebar-hover-bg: rgba(192, 88, 0, 0.08);
+    --avatar-border-color: #fafaf8;
+    --input-focus-border-color: rgba(192, 88, 0, 0.5);
+    --link-color: #c05800;
+    --link-underline-color: rgba(192, 88, 0, 0.25);
+    --toc-highlight: #c05800;
+    --btn-share-hover-color: #c05800;
+    --checkbox-checked-color: #c05800;
+    --tag-hover: rgba(192, 88, 0, 0.1);
+    --categories-hover-bg: rgba(192, 88, 0, 0.07);
+    --categories-icon-hover-color: #c05800;
+    --timeline-node-bg: rgba(192, 88, 0, 0.55);
+    --prompt-info-bg: rgba(192, 88, 0, 0.07);
+    --prompt-info-icon-color: #c05800;
+    --inline-code-bg: rgba(192, 88, 0, 0.07);
+    --highlighter-rouge-color: #7a3800;
+  }
+}
+</style>
