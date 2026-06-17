@@ -256,19 +256,23 @@ flowchart TB
     B["🔗 LinkedIn"]
     C["💻 GitHub"]
     D["📧 Email"]
+    E["🌐 obp.com.tr"]
 
     A --> B
     A --> C
     A --> D
+    A --> E
 
     click B "https://www.linkedin.com/in/ozan-berk-polat/" "Open LinkedIn Profile"
     click C "https://github.com/ozanberkpolat" "Visit My GitHub"
     click D "mailto:ozanberkplt@gmail.com" "Send me an Email"
+    click E "https://obp.com.tr" "Visit My Website"
 
     style A fill:#0078D4,color:#fff,stroke:#005A9E
     style B fill:#0A66C2,color:#fff
     style C fill:#24292F,color:#fff
     style D fill:#0078D4,color:#fff
+    style E fill:#ff8000,color:#fff
 ```
 ---
 
