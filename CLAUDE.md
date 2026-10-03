@@ -2,7 +2,11 @@
 
 Ozan Berk Polat's public Azure blog. **Astro 7** static site (moved off Jekyll + Chirpy on 2026-10-03),
 deployed to GitHub Pages by `.github/workflows/pages-deploy.yml` (`withastro/action@v6`, which runs
-`npm run build` = `astro build && pagefind --site dist`). Custom domain via `public/CNAME`.
+`npm run build` = `astro build && pagefind --site dist`). Pages settings: **build type `workflow`** and custom domain `blog.obp.com.tr`, both set through the API
+(`gh api -X PUT repos/ozanberkpolat/ozanberkpolat.github.io/pages -f build_type=workflow -f cname=blog.obp.com.tr`).
+⚠️ Until the cutover the repo was on `legacy` (branch build) racing the Actions deploy; moving `CNAME`
+out of the root made the legacy build drop the domain and the site 404'd for ~5 minutes (2026-10-03).
+Workflow deployments ignore `public/CNAME`; the domain lives in the Pages settings.
 
 ## Design
 Direction "D, Lead + Log" picked by the owner on 2026-10-03 from a design-options round (A Warm Console
