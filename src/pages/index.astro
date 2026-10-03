@@ -1,0 +1,52 @@
+---
+import Base from '../layouts/Base.astro';
+import PostList from '../components/PostList.astro';
+import { allPosts, isArticle, isRadar, groupBy, ymd, longDate, shortDate, readMinutes, summary, area, source, counts, slugify } from '../lib/posts';
+
+const posts = await allPosts();
+const articles = posts.filter(isArticle);
+const radar = posts.filter(isRadar);
+// Lead story: the newest article with a key figure; none set means a plain list.
+const lead = articles.find(p => p.data.figure);
+const rest = articles.filter(p => p !== lead);
+const topics = counts(articles.flatMap(p => p.data.categories));
+---
+<Base current="home">
+  <main class="wrap">
+    <section class="hello">
+      <h1>Notes from the Azure tenants <em>I actually run.</em></h1>
+      <p>Ozan Berk Polat, Azure Cloud Consultant in Istanbul. Identity-first security, disaster recovery, cost governance, and the fixes that never made it into the docs.</p>
+    </section>
+    <div class="grid">
+      <div>
+        {lead && (
+          <a class="leadstory" href={`/posts/${lead.id}/`}>
+            <div class="fig"><span class="n">{lead.data.figure}</span>{lead.data.figure_note && <span class="s">{lead.data.figure_note}</span>}</div>
+            <span class="kick">Featured · {lead.data.categories[0]}</span>
+            <h2>{lead.data.title}</h2>
+            <p>{summary(lead, 240)}</p>
+            <span class="meta">{longDate(lead.data.date)} · {readMinutes(lead)} min read</span>
+          </a>
+        )}
+        <PostList posts={rest} />
+      </div>
+      <aside class="rail">
+        <div>
+          <h2>Azure Radar <a href="/radar/">all {radar.length} →</a></h2>
+          <ul class="tl">
+            {groupBy(radar.slice(0, 8), p => ymd(p.data.date)).map(([, list]) => (
+              <>
+                <li class="d"><span>{shortDate(list[0].data.date)}</span></li>
+                {list.map(p => <li><a href={`/posts/${p.id}/`}>{p.data.title}</a><span class="sub">{area(p)}{source(p) && <> · {source(p)!.label}</>}</span></li>)}
+              </>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h4>Topics</h4>
+          <div class="topics">{topics.map(([t, n]) => <a href={`/categories/${slugify(t)}/`}>{t}<b>{n}</b></a>)}</div>
+        </div>
+      </aside>
+    </div>
+  </main>
+</Base>

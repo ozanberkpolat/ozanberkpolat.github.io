@@ -1,0 +1,16 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allPosts, isArticle, isRadar, counts, slugify } from '../../lib/posts';
+const posts = await allPosts();
+const writing = counts(posts.filter(isArticle).flatMap(p => p.data.categories));
+const radar = counts(posts.filter(isRadar).flatMap(p => p.data.categories).filter(c => c !== 'News'));
+---
+<Base title="Topics" current="topics">
+  <main class="wrap">
+    <section class="ph"><h1>Topics</h1><p>Articles by topic. Radar notes keep their own areas below.</p></section>
+    <h2 class="cloud-h">Writing</h2>
+    <div class="cloud">{writing.map(([c, n]) => <a href={`/categories/${slugify(c)}/`}>{c}<b>{n}</b></a>)}</div>
+    <h2 class="cloud-h">Radar areas</h2>
+    <div class="cloud">{radar.map(([c, n]) => <a href={`/categories/${slugify(c)}/`}>{c}<b>{n}</b></a>)}</div>
+  </main>
+</Base>

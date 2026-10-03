@@ -1,0 +1,18 @@
+---
+import Base from '../../layouts/Base.astro';
+import PostList from '../../components/PostList.astro';
+import { allPosts, slugify } from '../../lib/posts';
+export async function getStaticPaths() {
+  const posts = await allPosts();
+  const names = new Map<string, string>();
+  posts.forEach(p => p.data.categories.forEach(c => names.set(slugify(c), names.get(slugify(c)) ?? c)));
+  return [...names].map(([cat, name]) => ({ params: { cat }, props: { name, posts: posts.filter(p => p.data.categories.some(c => slugify(c) === cat)) } }));
+}
+const { name, posts } = Astro.props;
+---
+<Base title={name} current="topics">
+  <main class="wrap">
+    <section class="ph"><span class="kick">Topic</span><h1>{name}</h1><p>{posts.length} {posts.length === 1 ? 'post' : 'posts'}.</p></section>
+    <PostList posts={posts} />
+  </main>
+</Base>

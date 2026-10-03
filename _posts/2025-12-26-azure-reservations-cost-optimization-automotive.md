@@ -1,4 +1,6 @@
 ---
+figure: "$26,385"
+figure_note: "saved per year"
 title: Driving Cloud Efficiency - Saving $26,000 Yearly via Azure Reservations
 date: 2025-12-26 09:49:00 +0300
 categories: [Solution Advisory]

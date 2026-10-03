@@ -1,0 +1,11 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allPosts, counts, slugify } from '../../lib/posts';
+const tags = counts((await allPosts()).flatMap(p => p.data.tags));
+---
+<Base title="Tags">
+  <main class="wrap">
+    <section class="ph"><h1>Tags</h1><p>{tags.length} tags across all posts.</p></section>
+    <div class="cloud">{tags.map(([t, n]) => <a href={`/tags/${slugify(t)}/`}>{t}<b>{n}</b></a>)}</div>
+  </main>
+</Base>

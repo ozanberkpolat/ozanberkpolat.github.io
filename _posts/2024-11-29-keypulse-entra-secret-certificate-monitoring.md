@@ -1,8 +1,4 @@
 ---
-categories:
-- Azure
-- Entra ID
-- Automation
 date: 2024-11-29
 description: Build an automated Azure Entra ID credential monitoring
   system using PowerShell, Azure Functions, Microsoft Graph, Azure Key

@@ -1,0 +1,142 @@
+---
+import '../styles/global.css';
+
+interface Props { title?: string; description?: string; current?: 'home' | 'radar' | 'topics' | 'about'; article?: boolean; mermaid?: boolean }
+const { title, description = 'Ozan Berk Polat, Azure Cloud Consultant based in Istanbul: Azure platform architecture, identity-first security, IaC with Bicep and enterprise cost governance.', current, article = false, mermaid = false } = Astro.props;
+const SITE = 'Ozan Berk Polat';
+const full = title ? `${title} | ${SITE}` : `${SITE} | Azure Cloud Consultant`;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const image = new URL('/assets/img/avatar.JPG', Astro.site).href;
+const links = [['home', '/', 'Writing'], ['radar', '/radar/', 'Radar'], ['topics', '/categories/', 'Topics'], ['about', '/about/', 'About']];
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{full}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonical}>
+  <meta property="og:site_name" content={SITE}>
+  <meta property="og:title" content={title ?? SITE}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={canonical}>
+  <meta property="og:type" content={article ? 'article' : 'website'}>
+  <meta property="og:image" content={image}>
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#0f0e0d">
+  <link rel="icon" href="/assets/img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicons/favicon-96x96.png" sizes="96x96" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png">
+  <link rel="alternate" type="application/atom+xml" title={SITE} href="/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <script is:inline>
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t } catch (e) {}
+  </script>
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2R66G7C07T"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag('js', new Date()); gtag('config', 'G-2R66G7C07T');
+  </script>
+  <script is:inline async data-goatcounter="https://ozanberkplt.goatcounter.com/count" src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav" id="nav" aria-label="Main">
+      <a class="logo" href="/"><span>obp</span>Ozan Berk Polat</a>
+      <div class="links" id="links">
+        {links.map(([k, href, name]) => <a href={href} aria-current={k === current ? 'page' : undefined}>{name}</a>)}
+      </div>
+      <span class="grow"></span>
+      <button class="srch" id="open-search" aria-label="Search posts">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="t">Search</span><kbd>/</kbd>
+      </button>
+      <button class="iconbtn" id="theme" aria-label="Switch light or dark theme">
+        <svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      </button>
+      <button class="iconbtn burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="links">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+  </div>
+
+  <slot />
+
+  <div class="wrap">
+    <footer class="foot">
+      <span>© {new Date().getFullYear()} Ozan Berk Polat</span>
+      <nav aria-label="Elsewhere">
+        <a href="/feed.xml">RSS</a><a href="/archives/">Archive</a><a href="/tags/">Tags</a>
+        <a href="https://obp.com.tr">obp.com.tr</a><a href="https://github.com/ozanberkpolat">GitHub</a><a href="https://www.linkedin.com/in/ozan-berk-polat">LinkedIn</a>
+      </nav>
+    </footer>
+  </div>
+
+  <div class="search" id="search" hidden role="dialog" aria-modal="true" aria-label="Search">
+    <div class="box">
+      <label class="sr" for="q">Search posts</label>
+      <input id="q" type="search" placeholder="Search posts, e.g. entra or kernel" autocomplete="off">
+      <ul id="results"></ul>
+    </div>
+  </div>
+
+  <script>
+    const nav = document.getElementById('nav')!, burger = document.getElementById('burger')!;
+    burger.addEventListener('click', () => burger.setAttribute('aria-expanded', String(nav.classList.toggle('open'))));
+
+    document.getElementById('theme')!.addEventListener('click', () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme ? root.dataset.theme === 'dark' : !matchMedia('(prefers-color-scheme: light)').matches;
+      root.dataset.theme = dark ? 'light' : 'dark';
+      try { localStorage.setItem('theme', root.dataset.theme) } catch (e) {}
+    });
+
+    // Search: Pagefind's static index, built after `astro build` (absent in `astro dev`).
+    const dlg = document.getElementById('search')!, q = document.getElementById('q') as HTMLInputElement, out = document.getElementById('results')!;
+    let pf: any, seq = 0;
+    const hint = (t: string) => { out.innerHTML = `<li class="hint">${t}</li>` };
+    async function run() {
+      const n = ++seq, term = q.value.trim();
+      if (!term) return hint('Type to search all posts.');
+      try {
+        const path = '/pagefind/pagefind.js';
+        pf ??= await import(/* @vite-ignore */ path);
+        const res = await pf.search(term);
+        const data = await Promise.all(res.results.slice(0, 10).map((r: any) => r.data()));
+        if (n !== seq) return;
+        out.innerHTML = data.length ? data.map((d: any) => `<li><a href="${d.url}"><b>${d.meta.title ?? d.url}</b><span>${d.excerpt}</span></a></li>`).join('') : '';
+        if (!data.length) hint(`No posts match "${term.replace(/</g, '&lt;')}".`);
+      } catch (e) { hint('Search index is not available here. It is built with the site.') }
+    }
+    const open = () => { dlg.hidden = false; q.focus(); q.select(); run() };
+    const close = () => { dlg.hidden = true };
+    document.getElementById('open-search')!.addEventListener('click', open);
+    q.addEventListener('input', run);
+    dlg.addEventListener('click', e => { if (e.target === dlg) close() });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && !dlg.hidden) close();
+      const typing = (e.target as HTMLElement).closest('input, textarea, [contenteditable]');
+      if (!typing && (e.key === '/' || ((e.metaKey || e.ctrlKey) && e.key === 'k'))) { e.preventDefault(); open() }
+    });
+  </script>
+
+  {mermaid && (
+    <script is:inline type="module">
+      const blocks = [...document.querySelectorAll('pre.mermaid-src, pre > code.language-mermaid')].map(b => b.closest('pre'));
+      if (blocks.length) {
+        const { default: mermaid } = await import('https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs');
+        const light = document.documentElement.dataset.theme === 'light' || (!document.documentElement.dataset.theme && matchMedia('(prefers-color-scheme: light)').matches);
+        mermaid.initialize({ startOnLoad: false, theme: light ? 'neutral' : 'dark' });
+        for (const pre of blocks) {
+          const div = document.createElement('div');
+          div.className = 'mermaid';
+          div.textContent = pre.textContent;
+          pre.replaceWith(div);
+        }
+        await mermaid.run({ querySelector: '.mermaid' });
+      }
+    </script>
+  )}
+</body>
+</html>

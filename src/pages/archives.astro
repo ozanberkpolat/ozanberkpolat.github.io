@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro';
+import PostList from '../components/PostList.astro';
+import { allPosts } from '../lib/posts';
+const posts = await allPosts();
+---
+<Base title="Archive">
+  <main class="wrap">
+    <section class="ph"><h1>Archive</h1><p>Every post, articles and Radar notes, newest first.</p></section>
+    <PostList posts={posts} />
+  </main>
+</Base>

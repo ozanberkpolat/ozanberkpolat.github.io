@@ -1,8 +1,4 @@
 ---
-categories:
-- Azure
-- Entra ID
-- Cloud Automation
 date: 2024-08-29
 description: Automate monitoring of expiring Azure Entra ID
   certificates, client secrets, and SAML signing certificates using

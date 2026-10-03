@@ -1,0 +1,54 @@
+---
+import Base from '../layouts/Base.astro';
+import { allPosts, isRadar, groupBy, ymd, longDate, area, source, status, counts } from '../lib/posts';
+
+const radar = (await allPosts()).filter(isRadar);
+const top = counts(radar.map(area)).slice(0, 8);
+---
+<Base title="Azure Radar" description="Short notes on Azure updates and Azure Architecture Blog posts, picked from the official feeds every morning." current="radar">
+  <main class="wrap">
+    <section class="ph">
+      <h1>Azure Radar</h1>
+      <p>Short notes on Azure updates and Architecture Blog posts, picked from the official feeds every morning. Each one links to its source. {radar.length} so far.</p>
+    </section>
+    <div class="filters" role="group" aria-label="Filter by area">
+      <button data-area="" aria-pressed="true">All<b>{radar.length}</b></button>
+      {top.map(([a, n]) => <button data-area={a} aria-pressed="false">{a}<b>{n}</b></button>)}
+    </div>
+    <ul class="tl big" id="wire">
+      {groupBy(radar, p => ymd(p.data.date)).map(([, list]) => (
+        <>
+          <li class="d"><span>{longDate(list[0].data.date)}</span></li>
+          {list.map(p => {
+            const s = source(p), st = status(p);
+            return (
+              <li data-area={area(p)}>
+                <a href={`/posts/${p.id}/`}>{p.data.title}</a>
+                <span class="sub">
+                  {st && <span class={`chip ${st.toLowerCase()}`}>{st}</span>}
+                  <span>{area(p)}</span>
+                  {s && <a href={s.url} rel="noopener" target="_blank">{s.label} ↗</a>}
+                </span>
+              </li>
+            );
+          })}
+        </>
+      ))}
+    </ul>
+  </main>
+</Base>
+
+<script>
+  const wire = document.getElementById('wire')!;
+  document.querySelectorAll<HTMLButtonElement>('.filters button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.filters button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    const a = b.dataset.area;
+    let day: HTMLElement | null = null, any = false;
+    for (const li of Array.from(wire.children) as HTMLElement[]) {
+      if (li.classList.contains('d')) { if (day) day.hidden = !any; day = li; any = false; continue }
+      li.hidden = !!a && li.dataset.area !== a;
+      any ||= !li.hidden;
+    }
+    if (day) day.hidden = !any;
+  }));
+</script>

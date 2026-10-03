@@ -1,0 +1,96 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { allPosts, isRadar, isArticle, longDate, readMinutes, summary, slugify, area } from '../../lib/posts';
+
+export async function getStaticPaths() {
+  const posts = await allPosts();
+  return posts.map(post => {
+    // prev/next stay within the same stream (articles or Radar)
+    const same = posts.filter(p => isRadar(p) === isRadar(post));
+    const i = same.indexOf(post);
+    return { params: { slug: post.id }, props: { post, newer: same[i - 1], older: same[i + 1] } };
+  });
+}
+const { post, newer, older } = Astro.props;
+const { Content, headings } = await render(post);
+const radar = isRadar(post);
+const toc = headings.filter(h => h.depth === 2 || h.depth === 3);
+const showToc = post.data.toc !== false && toc.filter(h => h.depth === 2).length >= 2;
+const cat = radar ? area(post) : post.data.categories[0];
+---
+<Base title={post.data.title} description={summary(post, 200)} article mermaid={post.data.mermaid}>
+  <div class="prog" id="prog"></div>
+  <main class="wrap">
+    <div class="art">
+      <article>
+        <div class="meta">
+          {radar ? <a href="/radar/">Azure Radar</a> : cat && <a href={`/categories/${slugify(cat)}/`}>{cat}</a>}
+          {radar && <span>{cat}</span>}
+          <time datetime={post.data.date.toISOString()}>{longDate(post.data.date)}</time>
+          <span>{readMinutes(post)} min read</span>
+        </div>
+        <h1 data-pagefind-meta="title">{post.data.title}</h1>
+        {post.data.description && <p class="lede">{post.data.description}</p>}
+        {showToc && (
+          <details class="toc-m"><summary>On this page</summary>
+            <nav class="toc" aria-label="On this page"><ol>{toc.map(h => <li><a href={`#${h.slug}`} class={h.depth === 3 ? 'sub' : undefined}>{h.text}</a></li>)}</ol></nav>
+          </details>
+        )}
+        <div class="prose" data-pagefind-body data-pagefind-filter={`kind:${radar ? 'Radar' : 'Article'}`}><Content /></div>
+        {post.data.tags.length > 0 && <div class="tags">{post.data.tags.map(t => <a class="chip" href={`/tags/${slugify(t)}/`}>{t}</a>)}</div>}
+        <nav class="pn" aria-label="More posts">
+          {older && <a href={`/posts/${older.id}/`}><span>Older</span>{older.data.title}</a>}
+          {newer && <a class="next" href={`/posts/${newer.id}/`}><span>Newer</span>{newer.data.title}</a>}
+        </nav>
+      </article>
+      {showToc && (
+        <aside class="toc-d">
+          <nav class="toc" aria-label="On this page"><h4>On this page</h4><ol>{toc.map(h => <li><a href={`#${h.slug}`} class={h.depth === 3 ? 'sub' : undefined}>{h.text}</a></li>)}</ol></nav>
+        </aside>
+      )}
+    </div>
+  </main>
+</Base>
+
+<script>
+  // Code blocks: language label + copy button.
+  document.querySelectorAll<HTMLPreElement>('.prose pre.astro-code').forEach(pre => {
+    const box = document.createElement('div');
+    box.className = 'codebox';
+    const head = document.createElement('header');
+    head.innerHTML = `<span>${pre.dataset.language ?? ''}</span><button type="button">Copy</button>`;
+    pre.replaceWith(box);
+    box.append(head, pre);
+    const btn = head.querySelector('button')!;
+    btn.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(pre.innerText); btn.textContent = 'Copied' }
+      catch { btn.textContent = 'Select and copy' }
+      setTimeout(() => (btn.textContent = 'Copy'), 1500);
+    });
+  });
+
+  // Reading progress + table of contents that follows the section being read.
+  const prog = document.getElementById('prog')!;
+  const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('.toc a'));
+  const heads = Array.from(document.querySelectorAll<HTMLElement>('.prose h2[id], .prose h3[id]'));
+  const side = document.querySelector<HTMLElement>('.toc-d');
+  let current = '';
+  function onScroll() {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    prog.style.width = `${max > 0 ? Math.min(100, (scrollY / max) * 100) : 0}%`;
+    if (!heads.length) return;
+    // the active section is the last heading above the top quarter of the screen
+    let id = heads[0].id;
+    for (const h of heads) { if (h.getBoundingClientRect().top < innerHeight * 0.25) id = h.id; else break }
+    if (scrollY + innerHeight >= document.documentElement.scrollHeight - 4) id = heads.at(-1)!.id;
+    if (id === current) return;
+    current = id;
+    for (const a of links) a.classList.toggle('on', a.hash === `#${id}`);
+    const on = side?.querySelector<HTMLElement>('a.on');
+    if (side && on && (on.offsetTop < side.scrollTop || on.offsetTop > side.scrollTop + side.clientHeight - 40)) side.scrollTop = on.offsetTop - 40;
+  }
+  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', onScroll);
+  onScroll();
+</script>

@@ -1,0 +1,18 @@
+---
+import type { Post } from '../lib/posts';
+import { groupBy, year, ymd, readMinutes, summary, isRadar } from '../lib/posts';
+interface Props { posts: Post[] }
+const { posts } = Astro.props;
+---
+{groupBy(posts, p => year(p.data.date)).map(([y, list]) => (
+  <>
+    <div class="yr">{y} · {list.length} {list.length === 1 ? 'post' : 'posts'}</div>
+    {list.map(p => (
+      <a class="row" href={`/posts/${p.id}/`}>
+        <time datetime={p.data.date.toISOString()}>{ymd(p.data.date)}</time>
+        <div><h3>{p.data.title}</h3><p>{summary(p)}</p></div>
+        <span class="rt">{isRadar(p) ? 'Radar' : `${readMinutes(p)} min`}</span>
+      </a>
+    ))}
+  </>
+))}
