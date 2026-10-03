@@ -29,6 +29,10 @@ All tokens are in `src/styles/global.css`.
   too. Hand-written posts go out on Sundays (owner, 2026-10-03): commit them with that Sunday's date.
   The file is public in the repo from the moment it is committed.
 - Drafts live in `drafts/` (gitignored, local only) until the owner approves them.
+- **Weekly pipeline (2026-10-03):** Paperclip's Blog Writer (OBP Ops) proposes topics every Monday, the
+  owner picks one, approves the draft on a Paperclip card, and ops-backend's Blog Article Gateway
+  commits it through n8n with that Sunday's date. `src/pages/articles.json.ts` (articles incl.
+  scheduled ones) is what the gateway reads to avoid repeated topics and taken Sundays.
 - Mermaid fences are excluded from Shiki and rendered client-side only when `mermaid: true`.
 
 ## URLs kept from Chirpy
