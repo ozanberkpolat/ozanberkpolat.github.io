@@ -2,9 +2,9 @@
 import '../styles/global.css';
 
 interface Props { title?: string; description?: string; current?: 'home' | 'radar' | 'topics' | 'about'; article?: boolean; mermaid?: boolean }
-const { title, description = 'Ozan Berk Polat, Azure Cloud Consultant based in Istanbul: Azure platform architecture, identity-first security, IaC with Bicep and enterprise cost governance.', current, article = false, mermaid = false } = Astro.props;
+const { title, description = 'Ozan Berk Polat, Cloud Solutions Architect based in Istanbul: Azure platform architecture, identity-first security, IaC with Bicep and enterprise cost governance.', current, article = false, mermaid = false } = Astro.props;
 const SITE = 'Ozan Berk Polat';
-const full = title ? `${title} | ${SITE}` : `${SITE} | Azure Cloud Consultant`;
+const full = title ? `${title} | ${SITE}` : `${SITE} | Cloud Solutions Architect`;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const image = new URL('/assets/img/avatar.JPG', Astro.site).href;
 const links = [['home', '/', 'Writing'], ['radar', '/radar/', 'Radar'], ['topics', '/categories/', 'Topics'], ['about', '/about/', 'About']];

@@ -18,7 +18,7 @@ export async function GET({ site }: { site: URL }) {
   const xml = `<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ozan Berk Polat</title>
-  <subtitle>Azure Cloud Consultant</subtitle>
+  <subtitle>Cloud Solutions Architect</subtitle>
   <link href="${url('/feed.xml')}" rel="self"/>
   <link href="${url('/')}"/>
   <id>${url('/')}</id>

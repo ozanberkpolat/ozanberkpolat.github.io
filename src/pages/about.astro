@@ -1,0 +1,192 @@
+---
+import Base from '../layouts/Base.astro';
+
+const links = [
+  ['LinkedIn', 'https://www.linkedin.com/in/ozan-berk-polat'],
+  ['GitHub', 'https://github.com/ozanberkpolat'],
+  ['CV', 'https://cv.obp.com.tr'],
+  ['obp.com.tr', 'https://obp.com.tr'],
+];
+const certs = [
+  'Azure Administrator Associate',
+  'Azure Security Engineer Associate',
+  'Microsoft Entra Specialist',
+  'M365 Administrator Expert',
+  'Security, Compliance & Identity Fundamentals',
+];
+// The services rated highest in the old self-rating matrix.
+const areas = [
+  'Entra ID', 'PIM', 'Identity Governance', 'Managed Identities', 'Key Vault',
+  'Virtual Machines', 'App Service', 'Functions', 'Virtual Networks', 'NSGs', 'DNS',
+  'Azure Policy', 'Cost Management', 'Automation', 'Azure Arc',
+  'Log Analytics', 'Application Insights', 'Workbooks', 'Storage', 'Recovery Services', 'Logic Apps',
+];
+const work = [
+  ['Real-Time RPO Monitoring in Azure', '/posts/real-time-rpo-monitoring-in-azure/', 'Mar 2026'],
+  ['Enterprise FinOps Automation', '/posts/enterprise-finops-automation/', 'Mar 2026'],
+  ['Automated VM Utilization Reporting', '/posts/automating-azure-vm-utilization-reports-logic-apps/', 'Mar 2026'],
+  ['Comprehensive Disaster Recovery Testing', '/posts/comprehensive-azure-db-restore-test/', 'Jan 2026'],
+  ['Video Content Delivery Architecture', '/posts/configuring-video-delivery-azure-front-door/', 'Jan 2026'],
+];
+const career = [
+  ['D724 IT Services', 'Cloud Solutions Architect', 'Jul 2026 – Present', 'Azure platform architecture, DR, security posture', true],
+  ['D724 IT Services', 'Cloud Technologies Consultant', 'Dec 2025 – Jul 2026', 'Bank platform ownership, advisory engagements'],
+  ['Gunvor Group', 'Cloud Engineer', 'Jan 2024 – Dec 2025', 'Azure and Entra ID, Bicep IaC'],
+  ['Gunvor Group', 'System Engineer', 'Dec 2022 – Dec 2023', 'Global virtualization, hybrid cloud'],
+  ['Trendyol Group', 'System Engineer', 'Sep 2021 – Nov 2022', '300+ branches, global infrastructure'],
+  ['Eczacıbaşı Topluluğu', 'IT Specialist', 'Jul 2020 – Sep 2021', 'Enterprise IT support'],
+  ['Çelebi Aviation Holding', 'IT Specialist', 'Feb 2019 – Jul 2020', 'Aviation IT operations'],
+];
+// From the old engagement quadrant: 0 = platform operations, 100 = strategic advisory.
+const spectrum = [
+  ['Azure platform management', 30], ['Tenant and subscription governance', 50], ['Cost governance and FinOps', 58],
+  ['Identity and access architecture', 70], ['Landing zone architecture', 78], ['Security and compliance posture', 82],
+  ['Enterprise architecture alignment', 90], ['Strategic cloud advisory', 94],
+];
+---
+<Base title="About" description="Ozan Berk Polat, Cloud Solutions Architect at D724 IT Services in Istanbul: Azure platform ownership, identity-first security, disaster recovery and cost governance." current="about">
+  <main class="wrap">
+    <div class="about">
+      <aside class="card">
+        <img src="/assets/img/avatar-640.webp" alt="Ozan Berk Polat" width="640" height="640">
+        <div class="who">
+          <h1>Ozan Berk Polat</h1>
+          <p class="role">Cloud Solutions Architect</p>
+          <p class="meta">D724 IT Services · Istanbul</p>
+        </div>
+        <nav class="links" aria-label="Profiles">
+          {links.map(([n, u]) => <a href={u} rel="noopener" target="_blank">{n} <span>↗</span></a>)}
+        </nav>
+        <p class="mail">ozanberkplt@gmail.com</p>
+        <div class="block">
+          <h2>Certifications</h2>
+          <ul class="certs">{certs.map(c => <li>{c}</li>)}</ul>
+        </div>
+        <div class="block">
+          <h2>Core Azure areas</h2>
+          <div class="topics">{areas.map(a => <span>{a}</span>)}</div>
+        </div>
+      </aside>
+
+      <article class="prose about-main">
+        <p class="kick">About</p>
+        <h2 class="headline">I own Azure platforms end to end, <em>and design what comes next.</em></h2>
+        <p class="lead">I work where Azure architecture meets day-to-day enterprise operations: long-term ownership of a bank's Azure platform, and short, focused design engagements for customers with a hard problem and a deadline. Whatever the engagement, the bar is the same: secure, compliant, and built to last.</p>
+
+        <h2>Current role</h2>
+        <div class="role-head"><b>Cloud Solutions Architect</b><span>D724 IT Services, a Datamarket company · Jul 2026 – Present</span></div>
+        <h4>Enterprise architecture and technical leadership</h4>
+        <ul>
+          <li>Serving as the architectural authority for a major European bank's Azure environment, holding full technical accountability for all aspects of the platform including cost governance, security posture, networking, compute, backup, and disaster recovery.</li>
+          <li>Defining the strategic cloud roadmap by surfacing Well-Architected gaps and operational risks, guiding customer stakeholders through the necessary technical remediations.</li>
+          <li>Structuring the client relationship around strategic partnership, proposing architectures and gaining alignment rather than simply executing against a fixed scope.</li>
+        </ul>
+        <h4>Post-sales delivery and engineering excellence</h4>
+        <ul>
+          <li>Spearheading hands-on post-sales implementation and solution design across highly regulated industries, including automotive, banking, and insurance.</li>
+          <li>Architecting purpose-built Azure environments by deeply evaluating critical business drivers, including data residency, business continuity, and regulatory compliance.</li>
+          <li>Conducting cost analysis and optimization engagements, designing data-backed realignments that achieve an average 40% reduction in monthly Azure consumption costs.</li>
+          <li>Engineering custom automation solutions to eliminate operational bottlenecks and reduce manual overhead.</li>
+        </ul>
+        <h4>Pre-sales advisory and solution strategy</h4>
+        <ul>
+          <li>Driving the technical go-to-market strategy for D724 and Datamarket by defining the Azure solution portfolio, guiding the commercial teams on which architectural packages and managed services to offer customers.</li>
+          <li>Partnering with commercial teams to assess prospective environments, identifying security risks early to build technically sound, low-friction proposals.</li>
+          <li>Positioning specialized architectural and optimization packages as strategic entry points, opening pathways to broader managed services and architectural modernization engagements.</li>
+        </ul>
+
+        <h3>Before that at D724</h3>
+        <div class="role-head"><b>Cloud Technologies Consultant</b><span>Dec 2025 – Jul 2026</span></div>
+        <ul>
+          <li>Took over the end-to-end Azure platform of a major European bank under a managed services agreement, with full technical ownership of cost governance, security posture, networking, compute and IaC delivery through bespoke Bicep templates.</li>
+          <li>Drove continuous platform optimization through structured analysis of cost, resource governance and Azure best practices, keeping the environment compliant and audit-ready.</li>
+          <li>Led short-cycle solution design and advisory engagements for EA and CSP customers across automotive, food and beverage, banking and insurance: cost optimization, network infrastructure, communication services and content delivery.</li>
+          <li>Worked with the Datamarket pre-sales team on technically complex opportunities: scoping, effort estimation and solution positioning.</li>
+        </ul>
+
+        <h3>Selected write-ups from this work</h3>
+        <ul class="work">
+          {work.map(([t, u, d]) => <li><a href={u}>{t}</a><span>{d}</span></li>)}
+        </ul>
+
+        <h2>Career</h2>
+        <ol class="career">
+          {career.map(([c, p, d, f, now]) => (
+            <li class={now ? 'now' : undefined}>
+              <span class="when">{d}</span>
+              <div><b>{p}</b><span class="co">{c}</span><span class="focus">{f}</span></div>
+            </li>
+          ))}
+        </ol>
+
+        <h2>How I work</h2>
+        <p>Most of my week sits somewhere between keeping a platform healthy and shaping where it goes next. This is roughly where each kind of work lands.</p>
+        <div class="spectrum" role="list">
+          <div class="axis"><span>Platform operations</span><span>Strategic advisory</span></div>
+          {spectrum.map(([t, x]) => (
+            <div class="bar" role="listitem"><span class="t">{t}</span><span class="track"><i style={`width:${x}%`}></i></span></div>
+          ))}
+        </div>
+        <blockquote class="prompt-tip">
+          <p><strong>Cloud-first and automated-always.</strong> Bicep and PowerShell keep enterprise environments scalable, secure and compliant by design. Anything repetitive, error-prone or tedious gets automated, so the time goes into architecture that solves the customer's actual problem.</p>
+        </blockquote>
+      </article>
+    </div>
+  </main>
+</Base>
+
+<style>
+  .about { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 64px; padding-block: 38px 10px; align-items: start }
+  .card { order: 2; position: sticky; top: 24px; display: grid; gap: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--surf); padding: 20px }
+  .about-main { order: 1; max-width: 72ch }
+  @media (max-width: 960px) {
+    .about { grid-template-columns: minmax(0, 1fr); gap: 32px }
+    .card { order: 0; position: static }
+  }
+  .card img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; display: block }
+  .who h1 { font-size: 22px; font-weight: 800; letter-spacing: -.02em }
+  .who .role { margin: 4px 0 0; color: var(--acc); font-weight: 600 }
+  .who .meta { margin: 2px 0 0 }
+  .links { display: flex; flex-wrap: wrap; gap: 6px }
+  .links a { font-size: 13px; border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px; color: var(--sec) }
+  .links a:hover { color: var(--fg); border-color: var(--acc) }
+  .links a span { color: var(--mut) }
+  .mail { margin: -6px 0 0; font-family: var(--mono); font-size: 12px; color: var(--mut); user-select: all }
+  .block h2 { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--mut); margin-bottom: 8px }
+  .certs { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 13.5px; line-height: 1.35 }
+  .certs li { padding-left: 16px; position: relative }
+  .certs li::before { content: ""; position: absolute; left: 0; top: 6px; width: 7px; height: 7px; border-radius: 50%; background: var(--ok) }
+  .card .topics { display: flex; flex-wrap: wrap; gap: 5px }
+  .card .topics span { font-size: 12px; border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; color: var(--sec) }
+  .about-main .kick { margin: 0 0 8px }
+  .lead { font-size: 19px; line-height: 1.6; color: var(--fg); margin-bottom: 1.4em }
+  .about-main > h2:first-of-type { margin-top: 1.2em }
+  .role-head { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; margin-bottom: .6em }
+  .role-head b { font-size: 1.05em }
+  .about-main h4 { font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--acc); margin: 1.4em 0 .5em }
+  .role-head span { font-family: var(--mono); font-size: 12.5px; color: var(--mut) }
+  .work { list-style: none; padding: 0 }
+  .work li { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); padding: 8px 0; margin: 0 }
+  .work li span { font-family: var(--mono); font-size: 12px; color: var(--mut); white-space: nowrap }
+  .headline { font-size: clamp(28px, 3.8vw, 42px) !important; line-height: 1.12; letter-spacing: -.025em; font-weight: 800; margin: 0 0 .5em !important; max-width: 22ch }
+  .headline em { font-style: normal; color: var(--acc) }
+  .about-main > ul:not(.work) { list-style: none; padding-left: 0 }
+  .about-main > ul:not(.work) li { position: relative; padding-left: 20px }
+  .about-main > ul:not(.work) li::before { content: ""; position: absolute; left: 2px; top: .72em; width: 8px; height: 2px; background: var(--acc) }
+  .career { list-style: none; margin: 0 0 1.2em; padding: 0 0 0 20px; border-left: 2px solid var(--line); display: grid; gap: 18px }
+  .career li { position: relative; display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 4px 18px; margin: 0; line-height: 1.45 }
+  .career li::before { content: ""; position: absolute; left: -27px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--mut) }
+  .career li.now::before { border-color: var(--acc); background: var(--acc); box-shadow: 0 0 0 4px var(--tint) }
+  .career .when { font-family: var(--mono); font-size: 12.5px; color: var(--mut); padding-top: 2px }
+  .career li.now .when { color: var(--acc) }
+  .career b { display: block; font-size: 1em }
+  .career .co { display: block; color: var(--sec); font-size: .92em }
+  .career .focus { display: block; color: var(--mut); font-size: .85em }
+  @media (max-width: 600px) { .career li { grid-template-columns: minmax(0, 1fr) } }
+  .spectrum { display: grid; gap: 9px; margin: 0 0 1.4em; padding: 16px 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--surf) }
+  .spectrum .axis { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--mut); margin-bottom: 2px }
+  .spectrum .bar { display: grid; grid-template-columns: minmax(0, 15em) minmax(0, 1fr); gap: 14px; align-items: center; font-size: 14px }
+  .spectrum .track { height: 6px; border-radius: 999px; background: var(--line); overflow: hidden }
+  .spectrum .track i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, color-mix(in srgb, var(--acc) 35%, transparent), var(--acc)) }
+  @media (max-width: 600px) { .spectrum .bar { grid-template-columns: minmax(0, 1fr); gap: 4px } }
+</style>
