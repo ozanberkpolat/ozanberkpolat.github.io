@@ -7,8 +7,12 @@ const TZ = 'Europe/Istanbul';
 export const isRadar = (p: Post) => p.data.categories.includes('News');
 export const isArticle = (p: Post) => !isRadar(p);
 
+// Posts dated in the future stay hidden until a build runs on or after that date
+// (the Pages workflow rebuilds every Sunday 09:00 TRT, and n8n's daily commit rebuilds too).
 export async function allPosts() {
-  return (await getCollection('posts')).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+  const now = Date.now();
+  return (await getCollection('posts', p => p.data.date.getTime() <= now))
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 }
 
 // Jekyll's default slugify: lowercase, every run of non-alphanumerics becomes one "-".

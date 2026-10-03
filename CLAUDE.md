@@ -24,6 +24,11 @@ All tokens are in `src/styles/global.css`.
 - Kramdown leftovers (`{: .prompt-info }` after a blockquote, `> [!WARNING]`, `{: .noshadow }`) are
   handled by `src/lib/remark-kramdown.mjs`. Needs `@astrojs/markdown-remark` installed, because
   Astro 7's default Markdown processor (Sätteri) does not run remark plugins.
+- **Scheduling:** a post dated in the future is left out of every page until a build runs on or after
+  that date. The workflow rebuilds every Sunday 06:00 UTC (09:00 TRT), and n8n's daily commit rebuilds
+  too. Hand-written posts go out on Sundays (owner, 2026-10-03): commit them with that Sunday's date.
+  The file is public in the repo from the moment it is committed.
+- Drafts live in `drafts/` (gitignored, local only) until the owner approves them.
 - Mermaid fences are excluded from Shiki and rendered client-side only when `mermaid: true`.
 
 ## URLs kept from Chirpy

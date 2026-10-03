@@ -6,6 +6,9 @@ tags: [azure, linux, asr, kernel, troubleshooting]
 description: A step-by-step guide to fixing the "Site recovery extension does not support the Linux kernel" error by managing kernel versions on Azure Ubuntu VMs.
 ---
 
+> **Update, October 2026:** the optional `apt-mark hold` step below breaks Azure Update Manager patching unless you also exclude the kernel packages by name. See the note in [that section](#optional-preventing-automatic-kernel-upgrades).
+{: .prompt-warning }
+
 ## The Problem
 
 While setting up **Azure Site Recovery (ASR)**, you might encounter the following error regarding kernel versioning:
@@ -106,6 +109,11 @@ sudo apt-mark hold linux-azure
 > [!WARNING]
 > Use this with caution. While it stabilizes ASR compatibility, it also prevents the automatic application of security patches provided in newer kernel releases. Ensure you have a manual patching schedule in place.
 {: .prompt-warning }
+
+> **Update, October 2026: if you patch with Azure Update Manager, read this first.** A held kernel can stop Update Manager from installing anything at all. When a newer kernel is available, apt wants to move the held `linux-azure` metapackage. Update Manager runs `apt-get -y` without `--allow-change-held-packages`, so apt aborts the whole batch with exit code 100 (`PACKAGE_MANAGER_FAILURE` in the run history) and installs zero packages, not just zero kernel packages. On one VM this went on silently for weeks with more than a hundred security updates pending. A "security only" classification doesn't help, because the kernel packages are themselves classified as security updates.
+>
+> The fix is to exclude the kernel packages **by name** in the maintenance configuration (`packageNameMasksToExclude`, or the exclusion list in the portal): `linux-azure`, `linux-image-azure`, `linux-headers-azure`, `linux-tools-azure`, `linux-cloud-tools-azure`. Update Manager then never hands them to apt, and everything else installs. The first run after the change installed 79 packages with 0 failures. Also alert on scheduled runs that install nothing, not only on runs that fail.
+{: .prompt-danger }
 
 ## Conclusion
 
