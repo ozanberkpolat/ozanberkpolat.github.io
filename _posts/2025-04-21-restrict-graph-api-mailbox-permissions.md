@@ -29,7 +29,7 @@ To restrict access, you cannot assign policies directly to individual users or m
 
 1. Navigate to the Microsoft 365 Admin Center or Exchange Admin Center.
 2. Create a new Mail-Enabled Security Group.
-3. Add the specific mailboxes you want the application to access (e.g., `deal-recognizer-test@gunvorgroup.com`) as members of this group.
+3. Add the specific mailboxes you want the application to access (e.g., `app-mailbox@contoso.com`) as members of this group.
 4. Obtain the **Object ID** of this newly created group (`GroupID`).
 
 > You cannot use a standard Microsoft 365 Group or a Distribution List for this task. The policy explicitly requires a Mail-Enabled Security Group.
@@ -53,7 +53,7 @@ $AppId = "YOUR_APP_REGISTRATION_ID"
 $GroupId = "YOUR_MAIL_ENABLED_SECURITY_GROUP_ID"
 
 # Apply the restriction policy
-New-ApplicationAccessPolicy -AppId $AppId -PolicyScopeGroupId $GroupId -AccessRight RestrictAccess -Description "Restrict access to deal-recognizer-test@gunvorgroup.com"
+New-ApplicationAccessPolicy -AppId $AppId -PolicyScopeGroupId $GroupId -AccessRight RestrictAccess -Description "Restrict access to app-mailbox@contoso.com"
 ```
 
 ### Understanding the Command:
@@ -67,7 +67,7 @@ New-ApplicationAccessPolicy -AppId $AppId -PolicyScopeGroupId $GroupId -AccessRi
 Changes to Application Access Policies can take up to 30 minutes to fully propagate across Microsoft 365. Once the time has passed, you can test your policy directly from PowerShell using the `Test-ApplicationAccessPolicy` cmdlet:
 
 ```powershell
-Test-ApplicationAccessPolicy -AppId $AppId -Identity "deal-recognizer-test@gunvorgroup.com"
+Test-ApplicationAccessPolicy -AppId $AppId -Identity "app-mailbox@contoso.com"
 ```
 
 If the mailbox is successfully included in the group, the `AccessCheckResult` will display **Granted**. If you run the same test against a mailbox outside of the group, it should rightfully return **Denied**.

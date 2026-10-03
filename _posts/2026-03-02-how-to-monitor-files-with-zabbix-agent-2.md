@@ -8,7 +8,7 @@ description: "Learn how to monitor files waiting for extended periods in a speci
 
 ## Scenario Overview
 
-This configuration aims to detect `.XPE` files located in the `E:\FTP\IN\DC_BLOCK` directory on the `ISBFWFTP` server that have been sitting unprocessed for more than 1 hour. When the number of files meeting this criteria exceeds 1, an alert (Trigger) will automatically be generated in Zabbix.
+This configuration aims to detect `.XPE` files located in the `E:\FTP\IN\DC_BLOCK` directory on the `FTPSRV01` server that have been sitting unprocessed for more than 1 hour. When the number of files meeting this criteria exceeds 1, an alert (Trigger) will automatically be generated in Zabbix.
 
 The process consists of two main stages: Endpoint (Agent) configuration and Zabbix Server interface configuration.
 
@@ -16,7 +16,7 @@ The process consists of two main stages: Endpoint (Agent) configuration and Zabb
 
 ## Stage 1: Client-Side Configuration (Zabbix Agent)
 
-These steps must be performed directly on the target server (`ISBFWFTP`) that you wish to monitor.
+These steps must be performed directly on the target server (`FTPSRV01`) that you wish to monitor.
 
 ### Step 1: Editing the Configuration File
 
@@ -60,13 +60,13 @@ In the Zabbix interface, create a new **Item** for the corresponding Host and en
 
 For the Item you just created, configure a **Trigger** to send an alert when the specific threshold is exceeded:
 
-* **Name:** `ISBFWFTP: More than one .XPE file older than 1 hour detected in E:\FTP\IN\DC_BLOCK`
+* **Name:** `FTPSRV01: More than one .XPE file older than 1 hour detected in E:\FTP\IN\DC_BLOCK`
 * **Severity:** `Warning` *(or 'Average', depending on your company's policy)*
 * **Expression:** ```text
-last(/ISBFWFTP/xpe.file.count) > 1
+last(/FTPSRV01/xpe.file.count) > 1
 ```
 
-* **Description:** > Monitoring of the directory E:\FTP\IN\DC_BLOCK on ISBFWFTP server. This alert is triggered when more than one .XPE file remains unprocessed for over 1 hour. It indicates a potential failure in the FTP transfer process or the specific service responsible for processing DC_BLOCK files. Please check the service status and file permissions in the target folder.
+* **Description:** > Monitoring of the directory E:\FTP\IN\DC_BLOCK on FTPSRV01 server. This alert is triggered when more than one .XPE file remains unprocessed for over 1 hour. It indicates a potential failure in the FTP transfer process or the specific service responsible for processing DC_BLOCK files. Please check the service status and file permissions in the target folder.
 
 ---
 
@@ -75,7 +75,7 @@ last(/ISBFWFTP/xpe.file.count) > 1
 After completing all configurations, you need to verify that the system is working:
 
 1. Navigate to the **Monitoring > Latest Data** menu in the Zabbix interface.
-2. Filter the results by typing `ISBFWFTP` into the **Host** field.
+2. Filter the results by typing `FTPSRV01` into the **Host** field.
 3. Check the **Last Value** column for the corresponding Item (`File monitoring...`) to see if a number (e.g., `0`) is being returned.
 
 If a value is successfully returned, your data flow has started without any issues. Congratulations! 🎉

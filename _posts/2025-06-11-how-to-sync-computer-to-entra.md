@@ -13,12 +13,12 @@ In many hybrid environments, synchronizing every local computer object to the cl
 First, log in to your **AADC server** and launch the **Synchronization Service Manager** tool.
 
 ### 2. Access Connector Properties
-Navigate to the **Connectors** tab at the top of the interface. Locate your local Active Directory Connector (e.g., `gunvorgroup.local`), right-click on it, and select **Properties** (or use the shortcut `Ctrl+P`).
+Navigate to the **Connectors** tab at the top of the interface. Locate your local Active Directory Connector (e.g., `contoso.local`), right-click on it, and select **Properties** (or use the shortcut `Ctrl+P`).
 
 ### 3. Configure Directory Partitions
 Once the Properties window is open, follow these sub-steps to navigate your directory:
 * Select **Configure Directory Partitions** from the left-hand menu.
-* In the "Select directory partitions" list, highlight your specific domain partition (e.g., `DC=gunvorgroup,DC=local`).
+* In the "Select directory partitions" list, highlight your specific domain partition (e.g., `DC=contoso,DC=local`).
 * Click on the **Containers...** button on the right side.
 * A credentials window will appear. Enter the required administrative **User name** (e.g., `aberkpolat.p`) and **Password**, then click **OK**.
 
