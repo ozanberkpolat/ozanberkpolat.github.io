@@ -67,6 +67,9 @@ This script treats the Azure Fabric as the **Source of Truth**, updating the tag
 
 ### The Unified Master Sync Script
 
+> **Update, October 2026:** two fixes if you reuse this script. Match backup and replication items to VMs by resource ID, not by name (two VMs with the same name in different subscriptions would share each other's status; for Azure-to-Azure replication the source VM ID is in `properties.providerSpecificDetails.fabricObjectId`). And only count backup items whose `workloadType` is `VM` and whose `protectionState` is active: SQL Server in Azure VM backups also point at the VM, and suspended backups still show up as items.
+{: .prompt-warning }
+
 ```powershell
 # ============================================================================
 # Phase 2: Unified Governance Tag Synchronization (Interactive)
