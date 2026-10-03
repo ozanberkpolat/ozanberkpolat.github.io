@@ -81,11 +81,13 @@ const links = [['home', '/', 'Writing'], ['radar', '/radar/', 'Radar'], ['topics
     </div>
   </div>
 
-  <script>
-    const nav = document.getElementById('nav')!, burger = document.getElementById('burger')!;
+  <!-- is:inline so Vite leaves the Pagefind import alone: bundled, it wrapped it in a preload
+       helper with an undefined __VITE_PRELOAD__ and every search failed (fixed 2026-10-03). -->
+  <script is:inline type="module">
+    const nav = document.getElementById('nav'), burger = document.getElementById('burger');
     burger.addEventListener('click', () => burger.setAttribute('aria-expanded', String(nav.classList.toggle('open'))));
 
-    document.getElementById('theme')!.addEventListener('click', () => {
+    document.getElementById('theme').addEventListener('click', () => {
       const root = document.documentElement;
       const dark = root.dataset.theme ? root.dataset.theme === 'dark' : !matchMedia('(prefers-color-scheme: light)').matches;
       root.dataset.theme = dark ? 'light' : 'dark';
@@ -93,30 +95,29 @@ const links = [['home', '/', 'Writing'], ['radar', '/radar/', 'Radar'], ['topics
     });
 
     // Search: Pagefind's static index, built after `astro build` (absent in `astro dev`).
-    const dlg = document.getElementById('search')!, q = document.getElementById('q') as HTMLInputElement, out = document.getElementById('results')!;
-    let pf: any, seq = 0;
-    const hint = (t: string) => { out.innerHTML = `<li class="hint">${t}</li>` };
+    const dlg = document.getElementById('search'), q = document.getElementById('q'), out = document.getElementById('results');
+    let pf, seq = 0;
+    const hint = t => { out.innerHTML = `<li class="hint">${t}</li>` };
     async function run() {
       const n = ++seq, term = q.value.trim();
       if (!term) return hint('Type to search all posts.');
       try {
-        const path = '/pagefind/pagefind.js';
-        pf ??= await import(/* @vite-ignore */ path);
+        pf ??= await import('/pagefind/pagefind.js');
         const res = await pf.search(term);
-        const data = await Promise.all(res.results.slice(0, 10).map((r: any) => r.data()));
+        const data = await Promise.all(res.results.slice(0, 10).map(r => r.data()));
         if (n !== seq) return;
-        out.innerHTML = data.length ? data.map((d: any) => `<li><a href="${d.url}"><b>${d.meta.title ?? d.url}</b><span>${d.excerpt}</span></a></li>`).join('') : '';
+        out.innerHTML = data.map(d => `<li><a href="${d.url}"><b>${d.meta.title ?? d.url}</b><span>${d.excerpt}</span></a></li>`).join('');
         if (!data.length) hint(`No posts match "${term.replace(/</g, '&lt;')}".`);
-      } catch (e) { hint('Search index is not available here. It is built with the site.') }
+      } catch (e) { console.error(e); hint('Search is not available right now.') }
     }
     const open = () => { dlg.hidden = false; q.focus(); q.select(); run() };
     const close = () => { dlg.hidden = true };
-    document.getElementById('open-search')!.addEventListener('click', open);
+    document.getElementById('open-search').addEventListener('click', open);
     q.addEventListener('input', run);
     dlg.addEventListener('click', e => { if (e.target === dlg) close() });
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && !dlg.hidden) close();
-      const typing = (e.target as HTMLElement).closest('input, textarea, [contenteditable]');
+      const typing = e.target.closest && e.target.closest('input, textarea, [contenteditable]');
       if (!typing && (e.key === '/' || ((e.metaKey || e.ctrlKey) && e.key === 'k'))) { e.preventDefault(); open() }
     });
   </script>
