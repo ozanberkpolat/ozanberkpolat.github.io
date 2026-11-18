@@ -34,6 +34,7 @@ All tokens are in `src/styles/global.css`.
   commits it through n8n with that Sunday's date. `src/pages/articles.json.ts` (articles incl.
   scheduled ones) is what the gateway reads to avoid repeated topics and taken Sundays.
 - Mermaid fences are excluded from Shiki and rendered client-side only when `mermaid: true`.
+- **Ignite (2026-11-18):** Radar notes tagged `ignite 2026` (written by iot-stack `ops/ignite_radar.py` during the event) are listed by area on `/ignite/2026/` (`src/pages/ignite/2026.astro`, nav "Ignite"). They stay `News`, so Radar shows them too. Next year: copy the page with the new tag.
 
 ## URLs kept from Chirpy
 Every URL in the old sitemap (520) still resolves: posts, `/categories/<slug>/`, `/tags/<slug>/`

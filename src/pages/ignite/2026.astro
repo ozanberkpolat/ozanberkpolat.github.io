@@ -1,0 +1,41 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allPosts, groupBy, shortDate, area, status } from '../../lib/posts';
+
+// Notes written by iot-stack ops/ignite_radar.py during the event: News posts tagged "ignite 2026".
+const notes = (await allPosts()).filter(p => (p.data.tags ?? []).some(t => t.toLowerCase() === 'ignite 2026'));
+// ponytail: grouped by area, so no filter buttons (each group already is the filter)
+const groups = groupBy(notes, area).sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+const BON = 'https://news.microsoft.com/events/ignite/2026/book-of-news/';
+---
+<Base title="Microsoft Ignite 2026" description="Short notes on the Microsoft Ignite 2026 announcements that matter for Azure, Microsoft 365 and security engineers." current="ignite">
+  <main class="wrap">
+    <section class="ph">
+      <h1>Microsoft Ignite 2026</h1>
+      <p>17 to 20 November 2026, San Francisco. Short notes on the announcements worth acting on, picked from the
+        <a href={BON} rel="noopener" target="_blank">Book of News ↗</a> and Microsoft's blogs while the event runs.
+        {notes.length > 0 && <>{notes.length} so far, grouped by area.</>}</p>
+    </section>
+    {notes.length === 0
+      ? <p>Notes arrive during the event.</p>
+      : <ul class="tl big">
+          {groups.map(([a, list]) => (
+            <>
+              <li class="d"><span>{a} · {list.length}</span></li>
+              {list.map(p => {
+                const st = status(p);
+                return (
+                  <li>
+                    <a href={`/posts/${p.id}/`}>{p.data.title}</a>
+                    <span class="sub">
+                      {st && <span class={`chip ${st.toLowerCase()}`}>{st}</span>}
+                      <span>{shortDate(p.data.date)}</span>
+                    </span>
+                  </li>
+                );
+              })}
+            </>
+          ))}
+        </ul>}
+  </main>
+</Base>
