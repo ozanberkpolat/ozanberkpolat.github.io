@@ -1,11 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { allPosts, groupBy, shortDate, area, status } from '../../lib/posts';
+import { allPosts, groupBy, ymd, longDate, area, source, status, counts } from '../../lib/posts';
 
 // Notes written by iot-stack ops/ignite_radar.py during the event: News posts tagged "ignite 2026".
+// Same shape as /radar/: newest day first, area filter buttons on top (owner, 2026-11-19: area grouping alone was not enough).
 const notes = (await allPosts()).filter(p => (p.data.tags ?? []).some(t => t.toLowerCase() === 'ignite 2026'));
-// ponytail: grouped by area, so no filter buttons (each group already is the filter)
-const groups = groupBy(notes, area).sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+const areas = counts(notes.map(area));
 const BON = 'https://news.microsoft.com/events/ignite/2026/book-of-news/';
 ---
 <Base title="Microsoft Ignite 2026" description="Short notes on the Microsoft Ignite 2026 announcements that matter for Azure, Microsoft 365 and security engineers." current="ignite">
@@ -14,28 +14,51 @@ const BON = 'https://news.microsoft.com/events/ignite/2026/book-of-news/';
       <h1>Microsoft Ignite 2026</h1>
       <p>17 to 20 November 2026, San Francisco. Short notes on the announcements worth acting on, picked from the
         <a href={BON} rel="noopener" target="_blank">Book of News ↗</a> and Microsoft's blogs while the event runs.
-        {notes.length > 0 && <>{notes.length} so far, grouped by area.</>}</p>
+        {notes.length > 0 && <>{notes.length} so far.</>}</p>
     </section>
     {notes.length === 0
       ? <p>Notes arrive during the event.</p>
-      : <ul class="tl big">
-          {groups.map(([a, list]) => (
-            <>
-              <li class="d"><span>{a} · {list.length}</span></li>
-              {list.map(p => {
-                const st = status(p);
-                return (
-                  <li>
-                    <a href={`/posts/${p.id}/`}>{p.data.title}</a>
-                    <span class="sub">
-                      {st && <span class={`chip ${st.toLowerCase()}`}>{st}</span>}
-                      <span>{shortDate(p.data.date)}</span>
-                    </span>
-                  </li>
-                );
-              })}
-            </>
-          ))}
-        </ul>}
+      : <>
+          <div class="filters" role="group" aria-label="Filter by area">
+            <button data-area="" aria-pressed="true">All<b>{notes.length}</b></button>
+            {areas.map(([a, n]) => <button data-area={a} aria-pressed="false">{a}<b>{n}</b></button>)}
+          </div>
+          <ul class="tl big" id="wire">
+            {groupBy(notes, p => ymd(p.data.date)).map(([, list]) => (
+              <>
+                <li class="d"><span>{longDate(list[0].data.date)}</span></li>
+                {list.map(p => {
+                  const s = source(p), st = status(p);
+                  return (
+                    <li data-area={area(p)}>
+                      <a href={`/posts/${p.id}/`}>{p.data.title}</a>
+                      <span class="sub">
+                        {st && <span class={`chip ${st.toLowerCase()}`}>{st}</span>}
+                        <span>{area(p)}</span>
+                        {s && <a href={s.url} rel="noopener" target="_blank">{s.label} ↗</a>}
+                      </span>
+                    </li>
+                  );
+                })}
+              </>
+            ))}
+          </ul>
+        </>}
   </main>
 </Base>
+
+<script>
+  // ponytail: same filter as /radar/, copied rather than shared (two pages)
+  const wire = document.getElementById('wire');
+  if (wire) document.querySelectorAll<HTMLButtonElement>('.filters button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.filters button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    const a = b.dataset.area;
+    let day: HTMLElement | null = null, any = false;
+    for (const li of Array.from(wire.children) as HTMLElement[]) {
+      if (li.classList.contains('d')) { if (day) day.hidden = !any; day = li; any = false; continue }
+      li.hidden = !!a && li.dataset.area !== a;
+      any ||= !li.hidden;
+    }
+    if (day) day.hidden = !any;
+  }));
+</script>
